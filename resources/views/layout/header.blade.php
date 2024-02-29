@@ -23,20 +23,12 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: EstateAgency
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets/css/style.css" rel="stylesheet"> 
 </head>
 
 <body>
 
-  <!-- ======= Property Search Section ======= -->
+  {{-- <!-- ======= Property Search Section ======= --> --}}
   <div class="click-closed"></div>
   <!--/ Form Search Star /-->
   <div class="box-collapse">
@@ -159,22 +151,30 @@
             <a class="nav-link " href="/connexion">Se Connecter</a>
           </li> --}}
 
-            @guest
+            
+          {{-- <li class="nav-item">
+             <a class="nav-link " href="/inscription">S'inscrire</a> 
+          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link " href="/contact">Contact</a>
+          </li>
+          @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
+                                <li class="nav-item btn btn-success">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">poiuytre</a>
+                                <li class="nav-item btn btn-success">
+                                    <a class="nav-link " href="{{ route('register') }}">S'inscrire</a>
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown nav-item btn btn-success">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{-- {{ Auth::user()->name }} --}}
+                                    Dashboard
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -190,12 +190,6 @@
                                 </div>
                             </li>
                         @endguest
-          {{-- <li class="nav-item">
-             <a class="nav-link " href="/inscription">S'inscrire</a> 
-          </li> --}}
-          <li class="nav-item">
-            <a class="nav-link " href="/contact">Contact</a>
-          </li>
         </ul>
       </div>
 
