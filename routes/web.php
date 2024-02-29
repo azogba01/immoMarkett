@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\HomeController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,15 @@ use App\Http\Controllers\FrontController;
 |
 */
 Route::get('/',[FrontController::class, 'accueil']);
-Route::get('/about',[FrontController::class, 'about']);
 Route::get('/agent-grid',[FrontController::class, 'agent_grid']);
 Route::get('/agent-single',[FrontController::class, 'agent_single']);
 Route::get('/contact',[FrontController::class, 'contact']);
 Route::get('/property-grid',[FrontController::class, 'property_grid']);
 Route::get('/property-single',[FrontController::class, 'property_single']);
 Route::get('/blog-grid',[FrontController::class, 'blog_grid']);
-Route::get('/blog-single',[FrontController::class, 'blog_single']);
+Route::get('/login',[FrontController::class, 'connection']);
+Route::get('/inscription',[FrontController::class, 'inscription']);
+Route::get('/about',[FrontController::class, 'about']);
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\FrontController::class, 'accueil'])->name('home');

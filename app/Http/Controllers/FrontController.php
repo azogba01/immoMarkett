@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     public function accueil(){
         return view('Front.accueil');
        }
@@ -29,8 +33,11 @@ class FrontController extends Controller
        }
        public function blog_grid(){
         return view('Front.blog-grid');
-       }
-       public function blog_single(){
-        return view('Front.blog-single');
-       }
+       } 
+    //    public function inscription(){
+    //     return view('Front.inscription');
+    //    }
+    //    public function connection(){
+    //     return view('Front.login');
+    //    }
 }
