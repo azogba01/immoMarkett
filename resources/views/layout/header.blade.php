@@ -136,15 +136,15 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link active" href="/">Accueil</a>
+            <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Accueil</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="/about">Louer</a>
+            <a class="nav-link {{ request()->is('/about') ? 'active' : '' }}" href="/about">Louer</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="/property-grid">Acheter</a>
+            <a class="nav-link {{ request()->is('/property-grid') ? 'active' : '' }}" href="/property-grid">Acheter</a>
           </li>
 
           {{-- <li class="nav-item">
@@ -160,13 +160,13 @@
           </li>
           @guest
                             @if (Route::has('login'))
-                                <li class="nav-item btn btn-success">
+                                <li class="nav-item btn btn-success {{ request()->is('/login') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item btn btn-success">
+                                <li class="nav-item btn btn-success {{ request()->is('/register') ? 'active' : '' }}">
                                     <a class="nav-link " href="{{ route('register') }}">S'inscrire</a>
                                 </li>
                             @endif
