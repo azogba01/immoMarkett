@@ -24,6 +24,7 @@ Route::get('/blog-grid',[FrontController::class, 'blog_grid']);
 Route::get('/login',[FrontController::class, 'connection']);
 Route::get('/inscription',[FrontController::class, 'inscription']);
 Route::get('/about',[FrontController::class, 'about']);
+Route::get('/dashboard',[FrontController::class, 'admin']);
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\FrontController::class, 'accueil'])->name('home');
