@@ -14,15 +14,15 @@ return new class extends Migration
         Schema::create('publiers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('proprietaire_id');
-            $table->unsignedBigInteger('bien_id');
+            $table->unsignedBigInteger('proprite_id');
             $table->date('date publication');
             $table->foreign('proprietaire_id')
                     ->references('id')
                     ->on('proprietaires')
                     ->onDelete('cascade');
-             $table->foreign('bien_id')
+             $table->foreign('propriete_id')
                     ->references('id')
-                    ->on('biens')
+                    ->on('proprietes')
                     ->onDelete('cascade');
             $table->timestamps();
         });
