@@ -44,7 +44,7 @@ class CategorieController extends Controller
         'libelle'=>$request->input('libelle'),
        
        ]);
-       return redirect('/createcategorie')->with('success', 'Categorie ajouté(e) avec succes');
+       return redirect('/categorielist')->with('success', 'Categorie ajouté(e) avec succes');
     }
  
 

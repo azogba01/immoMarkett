@@ -36,7 +36,7 @@
     <tr>
       <th scope="row">{{$item->id}}</th>
       <td>{{$item->libelle}}</td>
-         <td><a href="/categories/{{$item->id}}/edit"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
+         <td><a href="/edit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
         <td>
         <form action="/categories/{{$item->id}}" method="POST">
            @csrf
