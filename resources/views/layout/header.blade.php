@@ -135,16 +135,16 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
 
-          <li class="nav-item">
-            <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Accueil</a>
+          <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+            <a class="nav-link " href="{{url('/')}}">Accueil</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link {{ request()->is('/about') ? 'active' : '' }}" href="/about">Louer</a>
-          </li>
+          <li class="nav-item {{ request()->is('/about') ? 'active' : '' }}">
+            <a class="nav-link  " href="{{url('/about')}}">Louer</a>
+          </li> 
 
-          <li class="nav-item">
-            <a class="nav-link {{ request()->is('/property-grid') ? 'active' : '' }}" href="/property-grid">Acheter</a>
+          <li class="nav-item {{ request()->is('/property-grid') ? 'active' : '' }}">
+            <a class="nav-link " href="{{url('/property-grid')}}">Acheter</a>
           </li>
 
           {{-- <li class="nav-item">
@@ -155,8 +155,8 @@
           {{-- <li class="nav-item">
              <a class="nav-link " href="/inscription">S'inscrire</a> 
           </li> --}}
-          <li class="nav-item">
-            <a class="nav-link " href="/contact">Contact</a>
+          <li class="nav-item {{ request()->is('/login') ? 'active' : '' }}">
+            <a class="nav-link " href="{{ url('/contact') }}">Contact</a>
           </li>
           @guest
                             @if (Route::has('login'))
@@ -172,7 +172,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown nav-item btn btn-success">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-togge" href="{{ url('/dashboard') }}"   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{-- {{ Auth::user()->name }} --}}
                                     Dashboard
                                 </a>
