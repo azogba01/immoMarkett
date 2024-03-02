@@ -16,7 +16,7 @@
                 <div class="col-lg-8">
                   <div class="intro-body">
                     <p class="intro-title-top">Doral, Florida
-                      <br> 78345
+                      <br>
                     </p>
                     <h1 class="intro-title mb-4 ">
                       <span class="color-b">204 </span> Mount

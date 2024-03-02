@@ -34,10 +34,10 @@ class FrontController extends Controller
        public function blog_grid(){
         return view('Front.blog-grid');
        } 
-    //    public function inscription(){
-    //     return view('Front.inscription');
-    //    }
-    //    public function connection(){
-    //     return view('Front.login');
-    //    }
+        public function inscription(){
+        return view('Front.inscription');
+       }
+        public function connection(){
+        return view('Front.login');
+       }
 }

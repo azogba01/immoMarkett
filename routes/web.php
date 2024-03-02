@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HomeController ;
+use App\Http\Controllers\CategorieController ;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,9 @@ Route::get('/blog-grid',[FrontController::class, 'blog_grid']);
 Route::get('/login',[FrontController::class, 'connection']);
 Route::get('/inscription',[FrontController::class, 'inscription']);
 Route::get('/about',[FrontController::class, 'about']);
+Route::get('/createcategorie',[CategorieController::class, 'create']);
+Route::get('/editecategorie',[CategorieController::class, 'edit']);
+Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');;
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\FrontController::class, 'accueil'])->name('home');
