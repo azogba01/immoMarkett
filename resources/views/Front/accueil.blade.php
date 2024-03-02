@@ -2,7 +2,7 @@
 
 @section('contenupage')
  
-  <!-- ======= Intro Section ======= -->
+  <!--   Intro Section   -->
   <div class="intro intro-carousel swiper position-relative">
 
     <div class="swiper-wrapper">
@@ -88,7 +88,7 @@
 
   <main id="main">
 
-    <!-- ======= Services Section ======= -->
+    <!--   Services Section   -->
     <section class="section-services section-t8">
       <div class="container">
         <div class="row">
@@ -177,7 +177,7 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Latest Properties Section ======= -->
+    <!--   Latest Properties Section   -->
     <section class="section-property section-t8">
       <div class="container">
         <div class="row">
@@ -396,7 +396,7 @@
       </div>
     </section><!-- End Latest Properties Section -->
 
-    <!-- ======= Agents Section ======= -->
+    <!--   Agents Section   -->
     <section class="section-agents section-t8">
       <div class="container">
         <div class="row">
@@ -586,7 +586,7 @@
       </div>
     </section><!-- End Agents Section -->
 
-    <!-- ======= Latest News Section ======= -->
+    <!--   Latest News Section   -->
     <section class="section-news section-t8">
       <div class="container">
         <div class="row">
@@ -710,7 +710,7 @@
       </div>
     </section><!-- End Latest News Section -->
 
-    <!-- ======= Testimonials Section ======= -->
+    <!--   Testimonials Section   -->
     <section class="section-testimonials section-t8 nav-arrow-a">
       <div class="container">
         <div class="row">

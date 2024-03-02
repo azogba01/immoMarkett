@@ -1,6 +1,6 @@
 <?php
 
-<<<<<<< HEAD
+ 
 namespace App\Http\Controllers;
 
 use App\Models\client;
@@ -65,7 +65,7 @@ class ClientController extends Controller
         //
     }
 }
-=======
+ 
  
  
 namespace App\Http\Controllers;
@@ -124,4 +124,4 @@ class ClientController extends Controller
         return redirect()->route('clients.index')->with('success', 'Client supprimé avec succès.');
     }
 }
->>>>>>> 3faede8f664bce7ea2e55505e78a3d8e5666b012
+  

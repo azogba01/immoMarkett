@@ -33,7 +33,7 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
+  <!--   Header   -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
@@ -262,7 +262,7 @@
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
+  <!--   Sidebar   -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
@@ -1147,7 +1147,7 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
+  <!--   Footer   -->
   <footer id="footer" class="footer">
     <div class="copyright">
       &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved

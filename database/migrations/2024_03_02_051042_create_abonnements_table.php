@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('abonnements', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('proprietaire_id');
+            // $table->unsignedBigInteger('proprietaire_id');
             $table->unsignedBigInteger('typeabonnement_id');
             $table->date('datedebut');
             $table->date('datefin');
-            $table->foreign('proprietaire_id')
-                    ->references('id')
-                    ->on('proprietaires')
-                    ->onDelete('cascade');
+            // $table->foreign('proprietaire_id')
+            //         ->references('id')
+            //         ->on('proprietaires')
+            //         ->onDelete('cascade');
             $table->foreign('typeabonnement_id')
                     ->references('id')
                     ->on('typeabonnements')
