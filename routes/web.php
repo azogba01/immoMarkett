@@ -31,7 +31,7 @@ Route::get('/createcategorie',[CategorieController::class, 'create']);
 Route::get('/editecategorie',[CategorieController::class, 'edit']);
 Route::get('/edit/{id}',[CategorieController::class, 'edit']);
 Route::get('/ categorielist',[CategorieController::class, 'categorie']);
-Route::post('/edit{id}',[CategorieController::class, 'update']) ;
+Route::put('/edit{id}/',[CategorieController::class, 'update'])->name('categories.update') ;
 
 Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');;
  

@@ -61,14 +61,14 @@ class CategorieController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Categorie $categorie)
     {
         $request->validate([
             'libelle' => 'required', 
              
         ]);
         $categorie->update($request->all());
-        return redirect()->back()->with('status','la categorie '.$categorie->libelle.' a ete bien modifier');
+        return redirect('categorielist')->with('status','la categorie '.$categorie->libelle.' a ete bien modifier');
 
 
     }
