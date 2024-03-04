@@ -2,9 +2,15 @@
 @section('contenupage')
  
    <marquee behavior="" direction=""><h1>Veuillez proceder a la modification</h1></marquee>
+<<<<<<< HEAD
 <form action="{{route('categories.update', $categorie->id) }}" method="POST">
         @csrf
     @method('PUT')
+=======
+<form action="{{ route('categories.update', $categorie->id) }}" method="POST">
+        @csrf
+        @method('PUT')
+>>>>>>> 82873ee05b1ee963dea7a50bca0f6bd571a0d111
    </section>
         <label for="libelle">Libéllé :</label>
         <input type="text" name="libelle" value="{{$categorie->libelle}}" required> <br> <br>
