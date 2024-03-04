@@ -31,7 +31,7 @@ Route::get('/about',[FrontController::class, 'about']);
 Route::get('/createcategorie',[CategorieController::class, 'create']);
 Route::get('/edit/{id}',[CategorieController::class, 'edit']);
 Route::get('/ categorielist',[CategorieController::class, 'categorie']);
-<<<<<<< HEAD
+
 Route::put('/edit{id}/',[CategorieController::class, 'update'])->name('categories.update') ;
 Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');
 
@@ -44,12 +44,10 @@ Route::put('/edit{id}/',[ProprieteController::class, 'update'])->name('propriete
 Route::delete('/delete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
 
 
-=======
 Route::put('/edit/{id}/',[CategorieController::class, 'update'])->name('categories.update') ;
 Route::delete('/delete/{id}/',[CategorieController::class, 'destroy'])->name('categories.delete') ;
 Route::delete('/show/{id}/',[CategorieController::class, 'show'])->name('categories.delete') ;
->>>>>>> 82873ee05b1ee963dea7a50bca0f6bd571a0d111
-
+ 
  
 Route::get('/dashboard',[FrontController::class, 'admin']);
  
