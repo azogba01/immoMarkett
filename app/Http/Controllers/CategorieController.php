@@ -18,8 +18,7 @@ class CategorieController extends Controller
     // }
      public function categorie(){
         $categorie=Categorie::latest()->get();
-        //::all();
-        //$salle = $salle->sortByDesc('created_at');
+    
         return view('categorielist',compact('categorie'));
     }
 
@@ -52,16 +51,24 @@ class CategorieController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+<<<<<<< HEAD
+   public function edit(string $id)
+{
+    $categorie = Categorie::findOrFail($id);
+
+    return view('editecategorie', compact('categorie'));
+=======
    public function edit($id)
 {
     $categorie= Categorie::find($id);
         return view('editecategorie')->with('categorie',$categorie);
+>>>>>>> 0e7bfdd547a30fb5e2cee71b139d65d5dd81932f
 }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Categorie $categorie)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'libelle' => 'required', 
@@ -71,6 +78,7 @@ class CategorieController extends Controller
         return redirect('categorielist')->with('status','la categorie '.$categorie->libelle.' a ete bien modifier');
 
 
+>>>>>>> 0e7bfdd547a30fb5e2cee71b139d65d5dd81932f
     }
 
     
@@ -82,6 +90,6 @@ class CategorieController extends Controller
     public function destroy(string $id)
     {
        Categorie::destroy($id);
-     return redirect('/categorie')->with('success', 'Suppression effectuer');
+     return redirect('/categorielist')->with('success', 'Suppression effectuer');
     }
 }
