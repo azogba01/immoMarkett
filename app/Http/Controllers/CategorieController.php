@@ -41,6 +41,7 @@ class CategorieController extends Controller
     {
          categorie::create([
         'libelle'=>$request->input('libelle'),
+        
        
        ]);
        return redirect('/categorielist')->with('success', 'Categorie ajouté(e) avec succes');
@@ -50,21 +51,41 @@ class CategorieController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+<<<<<<< HEAD
    public function edit(string $id)
 {
     $categorie = Categorie::findOrFail($id);
 
     return view('editecategorie', compact('categorie'));
+=======
+   public function edit($id)
+{
+    $categorie= Categorie::find($id);
+        return view('editecategorie')->with('categorie',$categorie);
+>>>>>>> 0e7bfdd547a30fb5e2cee71b139d65d5dd81932f
 }
 
     /**
      * Update the specified resource in storage.
      */
+<<<<<<< HEAD
     public function update( Request  $request, string $id)
     { 
         Categorie::Where('id',$id)->update([
         'libelle'=>$request->input('libelle')]);  
        return redirect('/categorielist')->with('success', 'La modification a été effectuer avec succes');
+=======
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'libelle' => 'required', 
+             
+        ]);
+        $categorie->update($request->all());
+        return redirect()->back()->with('status','la categorie '.$categorie->libelle.' a ete bien modifier');
+
+
+>>>>>>> 0e7bfdd547a30fb5e2cee71b139d65d5dd81932f
     }
 
     
