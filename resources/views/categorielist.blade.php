@@ -26,7 +26,7 @@
       <th scope="col">Action</th>
       <th scope="col">Supression</th>
       <th scope="col">Detail</th>
-      <button type='submit' class="btn btn-success" onclick="return confirm('voulez vous ajouter l\'element en question')"><a href="createcategorie">Ajouter</a></button>
+      <button type='submit' class="btn btn-success" ><a href="createcategorie">Ajouter</a></button>
    
 
     </tr>
@@ -52,10 +52,10 @@
       <td><a href="/{{ $item->id }}">
         <button class="btn btn-secondary">Details </button>
       </a></td>
-      <td><form action="/categorie/{{ $item->id }}" method ="POST" >
+      <td><form action="/delete/{{ $item->id }}" method ="POST">
         @csrf
         @method('Delete')
-        <button type="submit"> Supprimer </button> </a>
+        <button type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')"> Supprimer </button> </a>
       </td></tr>
        @endforeach
 

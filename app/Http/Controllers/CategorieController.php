@@ -41,55 +41,38 @@ class CategorieController extends Controller
     {
          categorie::create([
         'libelle'=>$request->input('libelle'),
-        
-       
        ]);
        return redirect('/categorielist')->with('success', 'Categorie ajouté(e) avec succes');
     }
  
-
     /**
      * Show the form for editing the specified resource.
-     */
-<<<<<<< HEAD
+     */ 
    public function edit(string $id)
 {
     $categorie = Categorie::findOrFail($id);
 
     return view('editecategorie', compact('categorie'));
-=======
-   public function edit($id)
-{
-    $categorie= Categorie::find($id);
-        return view('editecategorie')->with('categorie',$categorie);
->>>>>>> 0e7bfdd547a30fb5e2cee71b139d65d5dd81932f
 }
-
+ 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, string $id)
     {
-        $request->validate([
-            'libelle' => 'required', 
-             
+        categorie::where('id',$id)->update([
+            'libelle'=>$request->input('libelle')
         ]);
-        $categorie->update($request->all());
-        return redirect('categorielist')->with('status','la categorie '.$categorie->libelle.' a ete bien modifier');
-
-
->>>>>>> 0e7bfdd547a30fb5e2cee71b139d65d5dd81932f
-    }
-
-    
+        return redirect('categorielist')->with('status','la categorie   a ete bien modifier');
  
-
+    }
+ 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
        Categorie::destroy($id);
-     return redirect('/categorielist')->with('success', 'Suppression effectuer');
+       return redirect('/categorielist')->with('success', 'Suppression effectuer');
     }
 }
