@@ -2,7 +2,7 @@
 @section('contenupage')
 <main id="main">
 
-    <!-- ======= Intro Single ======= -->
+    <!--   Intro Single   -->
     <section class="intro-single">
       <div class="container">
         <div class="row">
@@ -31,7 +31,7 @@
       </div>
     </section><!-- End Intro Single-->
 
-    <!-- ======= Property Single ======= -->
+    <!--   Property Single   -->
     <section class="property-single nav-arrow-b">
       <div class="container">
         <div class="row justify-content-center">

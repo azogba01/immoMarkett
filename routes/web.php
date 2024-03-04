@@ -34,8 +34,9 @@ Route::get('/ categorielist',[CategorieController::class, 'categorie']);
 Route::post('/categories/{{id}}',[CategorieController::class, 'store'])->name('categories.update');;
 
 Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');;
+ 
 Route::get('/dashboard',[FrontController::class, 'admin']);
-
+ 
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\FrontController::class, 'accueil'])->name('home');

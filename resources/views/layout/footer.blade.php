@@ -1,4 +1,4 @@
- <!-- ======= Footer ======= -->
+ <!--   Footer   -->
  <section class="section-footer">
     <div class="container">
       <div class="row">

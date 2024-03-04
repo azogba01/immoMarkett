@@ -3,7 +3,7 @@
 
 <main id="main">
 
-    <!-- ======= Intro Single ======= -->
+    <!--   Intro Single   -->
     <section class="intro-single">
       <div class="container">
         <div class="row">
@@ -29,7 +29,7 @@
       </div>
     </section><!-- End Intro Single-->
 
-    <!-- ======= Contact Single ======= -->
+    <!--   Contact Single   -->
     <section class="contact">
       <div class="container">
         <div class="row">

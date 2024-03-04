@@ -28,7 +28,7 @@
 
 <body>
 
-  {{-- <!-- ======= Property Search Section ======= --> --}}
+  {{-- <!--   Property Search Section   --> --}}
   <div class="click-closed"></div>
   <!--/ Form Search Star /-->
   <div class="box-collapse">
@@ -122,7 +122,7 @@
     </div>
   </div><!-- End Property Search Section -->>
 
-  <!-- ======= Header/Navbar ======= -->
+  <!--   Header/Navbar   -->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">

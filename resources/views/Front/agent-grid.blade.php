@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('contenupage')
 <main id="main">
-    <!-- =======Intro Single ======= -->
+    <!--  Intro Single   -->
     <section class="intro-single">
       <div class="container">
         <div class="row">
@@ -27,7 +27,7 @@
       </div>
     </section><!-- End Intro Single-->
 
-    <!-- ======= Agents Grid ======= -->
+    <!--   Agents Grid   -->
     <section class="agents-grid grid">
       <div class="container">
         <div class="row">
