@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Produit;
+use App\Models\Propriete;
 
 use Illuminate\Http\Request;
 
@@ -10,10 +11,10 @@ class ProprieteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function propriete()
     {
-        $proprietes = Propriete::all();
-        return view('proprietes.index', compact('proprietes'));
+        $propriete = Propriete::all();
+        return view('proprietelist', compact('propriete'));
     }
 
     /**
@@ -21,7 +22,7 @@ class ProprieteController extends Controller
      */
     public function create()
     {
-        return view('proprietes.create');
+        return view('proprietecreate');
     }
 
     /**
@@ -31,10 +32,12 @@ class ProprieteController extends Controller
     {
         //
         Propriete::create([
-            'nom'=> $request->input('nom'),
+            'etat'=> $request->input('etat'),
             'prix'=> $request->input('prix'),
+            'superficie'=> $request->input('superficie'),
+            'condition'=> $request->input('condition'),
         ]);
-        return redirect('/proprietes');
+        return redirect('/proprietecreate');
     }
 
     /**
@@ -43,7 +46,7 @@ class ProprieteController extends Controller
     public function show(string $id)
     {
         $propriete = Propriete::findOrFail($id);
-        return view('proprietes.show', compact('propriete'));
+        return view('propriete.show', compact('propriete'));
     }
 
     /**
@@ -52,7 +55,7 @@ class ProprieteController extends Controller
     public function edit(string $id)
     {
         $propriete = Propriete::findOrFail($id);
-        return view('proprietes.edit', compact('propriete'));
+        return view('proprieteedite', compact('propriete'));
 
     }
 
@@ -62,10 +65,12 @@ class ProprieteController extends Controller
     public function update(Request $request, string $id)
     {
         Propriete::where('id', $id)->update([
-            'nom'=> $request->input('nom'),
+            'etat'=> $request->input('etat'),
             'prix'=> $request->input('prix'),
+            'superficie'=> $request->input('superficie'),
+            'condition'=> $request->input('condition'),
         ]);
-        return redirect('/proprietes');
+        return redirect('/proprietelist');
     }
 
     /**
@@ -74,7 +79,7 @@ class ProprieteController extends Controller
     public function destroy(string $id)
     {
         Propriete::destroy($id);
-        return redirect('/proprietes');
+        return redirect('/proprietelist');
     }
 }
 

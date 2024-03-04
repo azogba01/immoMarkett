@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HomeController ;
+use App\Http\Controllers\ProprieteController ;
 use App\Http\Controllers\CategorieController ;
 
 
@@ -28,12 +29,21 @@ Route::get('/inscription',[FrontController::class, 'inscription']);
 Route::get('/about',[FrontController::class, 'about']);
 
 Route::get('/createcategorie',[CategorieController::class, 'create']);
-Route::get('/editecategorie',[CategorieController::class, 'edit']);
 Route::get('/edit/{id}',[CategorieController::class, 'edit']);
 Route::get('/ categorielist',[CategorieController::class, 'categorie']);
-Route::post('/edit{id}',[CategorieController::class, 'update']) ;
+Route::put('/edit{id}/',[CategorieController::class, 'update'])->name('categories.update') ;
+Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');
 
-Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');;
+
+Route::get('/proprietecreate',[ProprieteController::class, 'create'])->name('propriete.create');
+Route::post('/proprietecreate',[ProprieteController::class, 'store'])->name('propriete.store');
+Route::get('/proprietelist',[ProprieteController::class, 'propriete']);
+Route::get('/edit/{id}',[ProprieteController::class, 'edit']);
+Route::put('/edit{id}/',[ProprieteController::class, 'update'])->name('propriete.update') ;
+Route::delete('/delete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
+
+
+
  
 Route::get('/dashboard',[FrontController::class, 'admin']);
  

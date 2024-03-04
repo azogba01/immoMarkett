@@ -17,8 +17,8 @@ return new class extends Migration
             //  $table->unsignedBigInteger('modalite_id');
             //  $table->unsignedBigInteger('ville_id');
             //  $table->unsignedBigInteger('categorie_id');
-            $table->string('Etat');
-            $table->integer('Prix');
+            $table->string('etat');
+            $table->integer('prix');
             $table->integer('superficie');
             $table->string('condition');
             //  $table->foreign('proprietaire_id')

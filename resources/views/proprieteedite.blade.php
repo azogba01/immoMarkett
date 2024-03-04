@@ -2,12 +2,18 @@
 @section('contenupage')
  
    <marquee behavior="" direction=""><h1>Veuillez proceder a la modification</h1></marquee>
-<form action="{{route('categories.update', $categorie->id) }}" method="POST">
+<form action="{{route('propriete.update', $propriete->id) }}" method="POST">
         @csrf
     @method('PUT')
    </section>
-        <label for="libelle">Libéllé :</label>
-        <input type="text" name="libelle" value="{{$categorie->libelle}}" required> <br> <br>
+        <label for="etat">Etat :</label>
+        <input type="text" name="etat" value="{{$propriete->etat}}" required> <br> <br>
+         <label for="prix">Prix :</label>
+        <input type="integer" name="prix" value="{{$propriete->prix}}" required> <br> <br>
+         <label for="superficie">Superficie :</label>
+        <input type="text" name="superficie" value="{{$propriete->superficie}}" required> <br> <br>
+         <label for="condition">Condition :</label>
+        <input type="text" name="condition" value="{{$propriete->condition}}" required> <br> <br>
 
         <button type="submit" href="">Enregistrer</button>
      <section>        
@@ -33,4 +39,5 @@
       
       </style>
   @endsection    
+
 
