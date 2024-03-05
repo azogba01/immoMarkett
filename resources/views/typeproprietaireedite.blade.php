@@ -3,16 +3,16 @@
  
    <marquee behavior="" direction=""><h1>Veuillez proceder a la modification</h1></marquee>
 
-<form action="{{route('categories.update', $categorie->id) }}" method="POST">
+<form action="{{route('typeproprietaires.update', $typeproprietaire->id) }}" method="POST">
         @csrf
 
-<form action="{{ route('categories.update', $categorie->id) }}" method="POST">
+<form action="{{ route('typeproprietaires.update', $categorie->id) }}" method="POST">
         @csrf
         @method('PUT')
 
    </section>
         <label for="libelle">Libéllé :</label>
-        <input type="text" name="libelle" value="{{$categorie->libelle}}" required> <br> <br>
+        <input type="text" name="libelle" value="{{$typeproprietaire->libelle}}" required> <br> <br>
 
         <button type="submit" href="">Enregistrer</button>
      <section>        

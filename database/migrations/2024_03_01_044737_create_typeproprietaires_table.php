@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('typeproprietaires', function (Blueprint $table) {
             $table->id();
-            $table->string('libéllé');
+            $table->string('libelle');
             $table->timestamps();
         });
     }

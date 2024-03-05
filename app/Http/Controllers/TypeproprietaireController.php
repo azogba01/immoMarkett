@@ -8,59 +8,61 @@ use App\Http\Requests\UpdatetypeproprietaireRequest;
 
 class TypeproprietaireController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
+     public function typeproprietaire(){
+        $typeproprietaire=Typeproprietaire::latest()->get();
+    
+        return view('typeproprietairelist',compact('typeproprietaire'));
     }
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        return view ('typeproprietairecreate');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoretypeproprietaireRequest $request)
+    public function store( Request $request)
     {
-        //
+         typeproprietaire::create([
+        'libelle'=>$request->input('libelle'),
+       ]);
+       return redirect('/typeproprietairelist')->with('success', 'typeproprietaire ajouté(e) avec succes');
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(typeproprietaire $typeproprietaire)
-    {
-        //
-    }
-
+ 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(typeproprietaire $typeproprietaire)
-    {
-        //
-    }
+   public function edit(string $id)
+{
+    $typeproprietaire = typeproprietaire::findOrFail($id);
 
+    return view('typeproprietaireedite', compact('typeproprietaire'));
+}
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatetypeproprietaireRequest $request, typeproprietaire $typeproprietaire)
-    {
-        //
+ 
+    public function update( Request  $request, string $id)
+    { 
+        typeproprietaire::Where('id',$id)->update([
+        'libelle'=>$request->input('libelle')]);  
+       return redirect('/typeproprietairelist')->with('success', 'La modification a été effectuer avec succes');
     }
-
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(typeproprietaire $typeproprietaire)
+    public function destroy(string $id)
     {
-        //
+       typeproprietaire::destroy($id);
+       return redirect('/typeproprietairelist')->with('success', 'Suppression effectuer');
     }
 }
+

@@ -10,5 +10,5 @@ class typeproprietaire extends Model
     use HasFactory;
     use HasFactory;
         protected $fillable=[
-       'id','libelle','modalite_id'];
+       'id','libelle'];
 }

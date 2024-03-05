@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Categorie;
 use Illuminate\Http\Request;
+use App\Http\Requests\UpdatecategorieRequest;
+
 
 class CategorieController extends Controller
 {
@@ -47,21 +49,13 @@ class CategorieController extends Controller
  
     /**
      * Show the form for editing the specified resource.
-<<<<<<< HEAD
      */
- 
-=======
-     */ 
->>>>>>> 82873ee05b1ee963dea7a50bca0f6bd571a0d111
    public function edit(string $id)
 {
     $categorie = Categorie::findOrFail($id);
 
     return view('editecategorie', compact('categorie'));
 }
-<<<<<<< HEAD
-  
-
     /**
      * Update the specified resource in storage.
      */
@@ -72,22 +66,6 @@ class CategorieController extends Controller
         'libelle'=>$request->input('libelle')]);  
        return redirect('/categorielist')->with('success', 'La modification a été effectuer avec succes');
     }
-
-=======
- 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        categorie::where('id',$id)->update([
-            'libelle'=>$request->input('libelle')
-        ]);
-        return redirect('categorielist')->with('status','la categorie   a ete bien modifier');
- 
-    }
->>>>>>> 82873ee05b1ee963dea7a50bca0f6bd571a0d111
- 
     /**
      * Remove the specified resource from storage.
      */
