@@ -49,7 +49,7 @@ Route::delete('/delete/{id}/',[ProprieteController::class, 'destroy'])->name('pr
 Route::get('/typeproprietairecreate',[TypeproprietaireController::class, 'create'])->name('typeproprietaires.create');
 Route::post('/typeproprietairecreate',[TypeproprietaireController::class, 'store'])->name('typeproprietaires.store');
 Route::get('/typeproprietairelist',[TypeproprietaireController::class, 'typeproprietaire']);
-Route::get('/edit/{id}',[TypeproprietaireController::class, 'edit']);
+Route::get('/edit/{id}/',[TypeproprietaireController::class, 'edit']);
 Route::put('/edit{id}/',[TypeproprietaireController::class, 'update'])->name('typeproprietaires.update') ;
 Route::delete('/delete/{id}/',[TypeproprietaireController::class, 'destroy'])->name('typeproprietaires.delete') ;
 
