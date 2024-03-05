@@ -17,8 +17,7 @@
       <th scope="col">Nom</th>
       <th scope="col">Action</th>
       <th scope="col">Supression</th>
-      <th scope="col">Detail</th>
-      <button type='submit' class="btn btn-success" ><a href="villecreate">Ajouter</a></button>
+         <button type='submit' class="btn btn-success" ><a href="villecreate">Ajouter</a></button>
    
 
     </tr>
@@ -31,9 +30,6 @@
           <td><a href="/edit/{{ $item->id }}">
             <button class="btn btn-primary">Modifier </button>
         </a> </td>
-      <td><a href="/{{ $item->id }}">
-        <button class="btn btn-secondary">Details </button>
-      </a></td>
       <td><form action="/delete/{{ $item->id }}" method ="POST">
         @csrf
         @method('Delete')

@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\typeproprietaire;
-use App\Http\Requests\StoretypeproprietaireRequest;
-use App\Http\Requests\UpdatetypeproprietaireRequest;
+use Illuminate\Http\Request;
+use App\Models\typeproprietaire; 
 
 class TypeproprietaireController extends Controller
 {
@@ -44,7 +42,7 @@ class TypeproprietaireController extends Controller
 {
     $typeproprietaire = typeproprietaire::findOrFail($id);
 
-    return view('typeproprietaireedite', compact('typeproprietaire'));
+    return view('typeproprietaireedite', compact('typeproprietaireedite'));
 }
     /**
      * Update the specified resource in storage.
