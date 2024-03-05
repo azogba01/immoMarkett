@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
-use App\Models\typeproprietaire;
-use App\Http\Requests\StoretypeproprietaireRequest;
-use App\Http\Requests\UpdatetypeproprietaireRequest;
+use App\Models\Typeproprietaire;
 
 class TypeproprietaireController extends Controller
 {
@@ -31,7 +30,7 @@ class TypeproprietaireController extends Controller
      */
     public function store( Request $request)
     {
-         typeproprietaire::create([
+         Typeproprietaire::create([
         'libelle'=>$request->input('libelle'),
        ]);
        return redirect('/typeproprietairelist')->with('success', 'typeproprietaire ajouté(e) avec succes');
@@ -42,7 +41,7 @@ class TypeproprietaireController extends Controller
      */
    public function edit(string $id)
 {
-    $typeproprietaire = typeproprietaire::findOrFail($id);
+    $typeproprietaire = Typeproprietaire::findOrFail($id);
 
     return view('typeproprietaireedite', compact('typeproprietaire'));
 }
@@ -52,7 +51,7 @@ class TypeproprietaireController extends Controller
  
     public function update( Request  $request, string $id)
     { 
-        typeproprietaire::Where('id',$id)->update([
+        Typeproprietaire::Where('id',$id)->update([
         'libelle'=>$request->input('libelle')]);  
        return redirect('/typeproprietairelist')->with('success', 'La modification a été effectuer avec succes');
     }
@@ -61,7 +60,7 @@ class TypeproprietaireController extends Controller
      */
     public function destroy(string $id)
     {
-       typeproprietaire::destroy($id);
+       Typeproprietaire::destroy($id);
        return redirect('/typeproprietairelist')->with('success', 'Suppression effectuer');
     }
 }
