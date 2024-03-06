@@ -1,6 +1,5 @@
 @extends('layout.app')
 @section('contenupage')
- 
 
     <section>
 <table class="table table-dark table-hover">

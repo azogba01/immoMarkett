@@ -29,6 +29,8 @@ Route::get('/blog-grid',[FrontController::class, 'blog_grid']);
 Route::get('/login',[FrontController::class, 'connection']);
 Route::get('/inscription',[FrontController::class, 'inscription']);
 Route::get('/about',[FrontController::class, 'about']);
+Route::get('/dashboard',[FrontController::class, 'admin']);
+// Route::get('/dashboard',[FrontController::class, 'admin']);
 
 Route::get('/createcategorie',[CategorieController::class, 'create']);
 Route::get('/edit/{id}',[CategorieController::class, 'edit']);
@@ -64,7 +66,6 @@ Route::delete('/delete/{id}/',[VilleController::class, 'destroy'])->name('villes
 Route::delete('/show/{id}/',[VilleController::class, 'show'])->name('villes.delete') ;
  
  
-Route::get('/dashboard',[FrontController::class, 'admin']);
  
 Auth::routes();
 

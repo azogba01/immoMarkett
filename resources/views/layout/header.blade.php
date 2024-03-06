@@ -172,7 +172,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown nav-item btn btn-success">
-                                <a id="navbarDropdown" class="nav-link dropdown-togge" href="{{ url('/dashboard') }}"   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-togge" href="{{ url('/dashboard') }}"    >
                                     {{-- {{ Auth::user()->name }} --}}
                                     Dashboard
                                 </a>
