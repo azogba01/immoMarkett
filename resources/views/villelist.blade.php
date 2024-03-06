@@ -23,7 +23,7 @@
     </tr>
   </thead>
   <tbody>
-    @foreach ($ville as $item)
+    @foreach ($villes as $item)
     <tr>
       <th scope="row">{{$item->id}}</th>
       <td>{{$item->nomville}}</td>

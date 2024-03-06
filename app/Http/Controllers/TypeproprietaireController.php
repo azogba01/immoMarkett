@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use App\Models\typeproprietaire; 
-=======
-
-use App\Models\Typeproprietaire;
->>>>>>> 25cd9cc8060b0be95160a2c227e73f4519f4fcd0
+use App\Http\Requests\UpdatetypeproprietaireRequest;
 
 class TypeproprietaireController extends Controller
 {

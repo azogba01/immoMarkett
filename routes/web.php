@@ -58,10 +58,10 @@ Route::delete('/delete/{id}/',[TypeproprietaireController::class, 'destroy'])->n
 
 
 Route::get('/villecreate',[VilleController::class, 'create']);
-Route::get('/edit/{id}',[VilleController::class, 'edit']);
-Route::get('/ villelist',[VilleController::class, 'ville']);
-Route::put('/edit{id}/',[VilleController::class, 'update'])->name('villes.update') ;
 Route::post('/villecreate',[VilleController::class, 'store'])->name('villes.store');
+Route::get('/ villelist',[VilleController::class, 'ville']);
+Route::get('/edit/{id}',[VilleController::class, 'edit']);
+Route::put('/edit{id}/',[VilleController::class, 'update'])->name('villes.update') ;
 Route::delete('/delete/{id}/',[VilleController::class, 'destroy'])->name('villes.delete') ;
 Route::delete('/show/{id}/',[VilleController::class, 'show'])->name('villes.delete') ;
  

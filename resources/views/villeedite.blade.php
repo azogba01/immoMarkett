@@ -3,10 +3,10 @@
  
    <marquee behavior="" direction=""><h1>Veuillez proceder a la modification</h1></marquee>
 
-<form action="{{route('villes.update', $categorie->id) }}" method="POST">
+<form action="{{route('villes.update', $ville->id) }}" method="POST">
         @csrf
 
-<form action="{{ route('villes.update', $categorie->id) }}" method="POST">
+<form action="{{ route('villes.update', $ville->id) }}" method="POST">
         @csrf
         @method('PUT')
 
