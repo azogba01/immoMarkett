@@ -12,22 +12,11 @@ class CategorieController extends Controller
     /**
      * Display a listing of the resource.
      */
-    // public function index()
-    // {
-    //      $categorie=Categorie::all();
-    //            // $salle->etudiants->get();
-    //             return view('categorie',compact('categorie'));
-    // }
+    
      public function categorie(){
         $categorie=Categorie::latest()->get();
-    
         return view('categorielist',compact('categorie'));
-    }
-
-
-
-
-
+    } 
     /**
      * Show the form for creating a new resource.
      */
@@ -49,13 +38,26 @@ class CategorieController extends Controller
  
     /**
      * Show the form for editing the specified resource.
+<<<<<<< HEAD
+ 
+     */
+ 
+  public function edit(string $id)
+=======
      */
    public function edit(string $id)
+>>>>>>> 9f17a1be83e42f4394a26bc78135dddaceea91f0
 {
     $categorie = Categorie::findOrFail($id);
 
     return view('editecategorie', compact('categorie'));
 }
+<<<<<<< HEAD
+
+  
+
+=======
+>>>>>>> 9f17a1be83e42f4394a26bc78135dddaceea91f0
     /**
      * Update the specified resource in storage.
      */
@@ -66,7 +68,12 @@ class CategorieController extends Controller
         'libelle'=>$request->input('libelle')]);  
        return redirect('/categorielist')->with('success', 'La modification a été effectuer avec succes');
     }
+<<<<<<< HEAD
+
+ /**
+=======
     /**
+>>>>>>> 9f17a1be83e42f4394a26bc78135dddaceea91f0
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
