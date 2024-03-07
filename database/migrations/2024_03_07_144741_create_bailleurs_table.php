@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('proprietaires', function (Blueprint $table) {
+        Schema::create('bailleurs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('typeproprietaire_id');
-            $table->string('nomp');
+            // $table->unsignedBigInteger('typeproprietaire_id');
+            $table->string('nom');
             $table->string('prenom');
             $table->integer('tel');
-             $table->foreign('typeproprietaire_id')
-                    ->references('id')
-                    ->on('typeproprietaires')
-                    ->onDelete('cascade');
-            $table->timestamps();
+            //  $table->foreign('typeproprietaire_id')
+            //         ->references('id')
+            //         ->on('typeproprietaires')
+            //         ->onDelete('cascade');
+             $table->timestamps();
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('proprietaires');
+        Schema::dropIfExists('bailleurs');
     }
 };

@@ -6,7 +6,9 @@ use App\Http\Controllers\HomeController ;
 use App\Http\Controllers\ProprieteController ;
 use App\Http\Controllers\TypeproprietaireController;
 use App\Http\Controllers\VilleController ;
-use App\Http\Controllers\CategorieController ;
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\BailleurController;
+
 
 
 /*
@@ -57,15 +59,23 @@ Route::put('/edit{id}/',[TypeproprietaireController::class, 'update'])->name('ty
 Route::delete('/delete/{id}/',[TypeproprietaireController::class, 'destroy'])->name('typeproprietaires.delete') ;
 
 
-Route::get('/villecreate',[VilleController::class, 'create']);
+Route::get('/bailleurcreate',[BailleurController::class, 'create']);
+Route::post('/bailleurcreate',[BailleurController::class, 'store'])->name('bailleur.store');
+Route::get('/ bailleurlist',[BailleurController::class, 'bailleur']);
+Route::get('/edit/{id}',[BailleurController::class, 'edit']);
+Route::put('/edit{id}/',[BailleurController::class, 'update'])->name('bailleurs.update') ;
+Route::delete('/delete/{id}/',[BailleurController::class, 'destroy'])->name('bailleurs.delete') ;
+Route::delete('/show/{id}/',[BailleurController::class, 'show'])->name('bailleurs.delete') ;
+
+
+ 
+ Route::get('/villecreate',[VilleController::class, 'create']);
 Route::post('/villecreate',[VilleController::class, 'store'])->name('villes.store');
 Route::get('/ villelist',[VilleController::class, 'ville']);
-Route::get('/edit/{id}',[VilleController::class, 'edit']);
+Route::get('/edit/{id}/',[VilleController::class, 'edit']);
 Route::put('/edit{id}/',[VilleController::class, 'update'])->name('villes.update') ;
 Route::delete('/delete/{id}/',[VilleController::class, 'destroy'])->name('villes.delete') ;
-Route::delete('/show/{id}/',[VilleController::class, 'show'])->name('villes.delete') ;
- 
- 
+Route::delete('/show/{id}/',[bailleurController::class, 'show'])->name('villes.delete') ;
  
 Auth::routes();
 
