@@ -7,7 +7,7 @@
  <br>
  <br>
    <marquee behavior="" direction=""><h1>Veuillez proceder a la modification</h1></marquee>
-<form action="{{route('bailleur.update', $bailleur->id) }}" method="POST">
+<form action="{{route('bailleurs.update', $bailleur->id) }}" method="POST">
         @csrf
     @method('PUT')
    </section>

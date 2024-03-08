@@ -36,7 +36,7 @@ class BailleurController extends Controller
             'prenom'=> $request->input('prenom'),
             'tel'=> $request->input('tel'),
         ]);
-        return redirect('/bailleurcreate');
+        return redirect('/bailleurlist');
     }
 
     /**
@@ -53,21 +53,27 @@ class BailleurController extends Controller
      */
     public function edit(string $id)
     {
-        $bailleurs = Bailleur::findOrFail($id);
-        return view('bailleuredite', compact('bailleurs'));
+        $bailleur = Bailleur::findOrFail($id);
+        
+        return view('/bailleuredite', compact('bailleur'));
 
     }
 
     /**
      * Update the specified resource in storage.
      */
+
     public function update(Request $request, string $id)
     {
+        $request->validate([
+            'nom' => 'required',
+            'prenom' => 'required',
+            'tel' => 'required',
+        ]);
         Bailleur::where('id', $id)->update([
             'nom'=> $request->input('nom'),
             'prenom'=> $request->input('prenom'),
             'tel'=> $request->input('tel'),
-            'condition'=> $request->input('condition'),
         ]);
         return redirect('/bailleurlist');
     }
@@ -75,6 +81,7 @@ class BailleurController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
     public function destroy(string $id)
     {
         Bailleur::destroy($id);

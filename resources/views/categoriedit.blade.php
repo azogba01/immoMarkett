@@ -2,10 +2,7 @@
 @section('contenupage')
  
    <marquee behavior="" direction=""><h1>Veuillez proceder a la modification</h1></marquee>
-
-<form action="{{route('categories.update', $categorie->id) }}" method="POST">
-        @csrf
-
+ 
 <form action="{{ route('categories.update', $categorie->id) }}" method="POST">
         @csrf
         @method('PUT')

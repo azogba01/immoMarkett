@@ -37,14 +37,16 @@
         </form>  
       </td>
       <td><a href="/categories/{{$item->id}}"><button class="btn btn-success">Detail</button></a></td>
+      // <td><a href="{{ route('categorie.edit', ['id' => $item->id]) }}">Editer</a></td>
     </tr> --}}
-          <td><a href="/edit/{{ $item->id }}">
-            <button class="btn btn-primary">Modifier </button>
+          <td><a href="/categoryedit/{{ $item->id }}/">
+
+            <button class="btn btn-primary">Modifier</button>
         </a> </td>
-      <td><a href="/{{ $item->id }}">
-        <button class="btn btn-secondary">Details </button>
+      <td><a href="categorieshow/{{ $item->id }}">
+        <button class="btn btn-secondary">Details</button>
       </a></td>
-      <td><form action="/delete/{{ $item->id }}" method ="POST">
+      <td><form action="/categoriedelete/{{ $item->id }}" method="POST">
         @csrf
         @method('Delete')
         <button type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')"> Supprimer </button> </a>

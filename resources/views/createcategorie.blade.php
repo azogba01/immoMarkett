@@ -18,8 +18,7 @@
         <input type="text" name="libelle" required> <br><br>
           <button type="submit">Envoyer</button>
 
-
-</form>
+ </form>
 
 <style>
           form{
@@ -40,5 +39,5 @@
         margin-left: 150px;
       }
       
-      </style>
+</style>
 @endsection 
