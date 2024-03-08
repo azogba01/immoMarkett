@@ -12,18 +12,15 @@
         {{ session('success') }}
     </div>
 @endif
-    <form action="{{ route('villes.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('villes.create') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="nomville">Libelle :</label>
         <input type="text" name="nomvillle" required> <br><br>
           <button type="submit">Envoyer</button>
-
-
 </form>
 
-<style>
+        <style>
           form{
-           
             width: 230px;
             height: 200px;
             margin-left: 600px;

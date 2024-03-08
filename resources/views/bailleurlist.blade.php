@@ -31,10 +31,10 @@
       <td>{{$item->nom}}</td>
       <td>{{$item->prenom}}</td>
       <td>{{$item->tel}}</td>
-          <td><a href="/edit/{{ $item->id }}">
+          <td><a href="{{url('/bailleuredit/'.$item->id)}}">
             <button class="btn btn-primary">Modifier </button>
         </a> </td>
-      <td><form action="/delete/{{ $item->id }}" method ="POST">
+      <td><form action="/bailleurdelete/{{ $item->id }}" method ="POST">
         @csrf
         @method('Delete')
         <button type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')"> Supprimer </button> </a>

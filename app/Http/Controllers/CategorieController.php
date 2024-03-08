@@ -38,15 +38,13 @@ class CategorieController extends Controller
  
     /**
      * Show the form for editing the specified resource.
-
- 
      */
  
   public function edit(string $id)
 {
     $categorie = Categorie::findOrFail($id);
 
-    return view('editecategorie', compact('categorie'));
+    return view('/categoriedit', compact('categorie'));
 }
 
 
@@ -57,7 +55,8 @@ class CategorieController extends Controller
     public function update( Request  $request, string $id)
     { 
         Categorie::Where('id',$id)->update([
-        'libelle'=>$request->input('libelle')]);  
+        'libelle'=>$request->input('libelle')
+    ]);  
        return redirect('/categorielist')->with('success', 'La modification a été effectuer avec succes');
     }
 

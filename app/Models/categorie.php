@@ -10,9 +10,9 @@ class categorie extends Model
     use HasFactory;
     use HasFactory;
         protected $fillable=[
-       'id','libelle','categorie'];
+       'id','libelle'];
 
-        public function biens(){
-        return $this->hasMany(Bien::class);
-     }
+    //     public function biens(){
+    //     return $this->hasMany(Bien::class);
+    //  }
 }

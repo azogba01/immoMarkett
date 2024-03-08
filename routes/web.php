@@ -35,47 +35,47 @@ Route::get('/dashboard',[FrontController::class, 'admin']);
 // Route::get('/dashboard',[FrontController::class, 'admin']);
 
 Route::get('/createcategorie',[CategorieController::class, 'create']);
-Route::get('/edit/{id}',[CategorieController::class, 'edit']);
-Route::get('/ categorielist',[CategorieController::class, 'categorie']);
-Route::put('/edit{id}/',[CategorieController::class, 'update'])->name('categories.update') ;
+Route::get('/categoryedit/{id}/',[CategorieController::class,'edit']);
+Route::put('/categoryedit/{id}/',[CategorieController::class, 'update'])->name('categories.update') ;
+Route::get('/categorielist',[CategorieController::class, 'categorie']);
 Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');
-Route::delete('/delete/{id}/',[CategorieController::class, 'destroy'])->name('categories.delete') ;
-Route::delete('/show/{id}/',[CategorieController::class, 'show'])->name('categories.delete') ;
+Route::delete('/categoriedelete/{id}/',[CategorieController::class, 'destroy'])->name('categories.delete') ;
+Route::delete('/categorieshow/{id}/',[CategorieController::class, 'show'])->name('categories.show') ;
 
 
 Route::get('/proprietecreate',[ProprieteController::class, 'create'])->name('propriete.create');
 Route::post('/proprietecreate',[ProprieteController::class, 'store'])->name('propriete.store');
 Route::get('/proprietelist',[ProprieteController::class, 'propriete']);
-Route::get('/edit/{id}',[ProprieteController::class, 'edit']);
-Route::put('/edit{id}/',[ProprieteController::class, 'update'])->name('propriete.update') ;
-Route::delete('/delete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
+Route::get('/proprietedit/{id}',[ProprieteController::class, 'edit']);
+Route::put('/proprietedit/{id}/',[ProprieteController::class, 'update'])->name('propriete.update') ;
+Route::delete('/proprietedelete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
 
 
 Route::get('/typeproprietairecreate',[TypeproprietaireController::class, 'create'])->name('typeproprietaires.create');
 Route::post('/typeproprietairecreate',[TypeproprietaireController::class, 'store'])->name('typeproprietaires.store');
 Route::get('/typeproprietairelist',[TypeproprietaireController::class, 'typeproprietaire']);
-Route::get('/edit/{id}/',[TypeproprietaireController::class, 'edit']);
-Route::put('/edit{id}/',[TypeproprietaireController::class, 'update'])->name('typeproprietaires.update') ;
-Route::delete('/delete/{id}/',[TypeproprietaireController::class, 'destroy'])->name('typeproprietaires.delete') ;
+Route::get('/typeproprietairedit/{id}/',[TypeproprietaireController::class, 'edit']);
+Route::put('/typeproprietairedit/{id}/',[TypeproprietaireController::class, 'update'])->name('typeproprietaires.update') ;
+Route::delete('/typeproprietairedelete/{id}/',[TypeproprietaireController::class, 'destroy'])->name('typeproprietaires.delete') ;
 
 
 Route::get('/bailleurcreate',[BailleurController::class, 'create']);
 Route::post('/bailleurcreate',[BailleurController::class, 'store'])->name('bailleur.store');
-Route::get('/ bailleurlist',[BailleurController::class, 'bailleur']);
-Route::get('/edit/{id}',[BailleurController::class, 'edit']);
-Route::put('/edit{id}/',[BailleurController::class, 'update'])->name('bailleurs.update') ;
-Route::delete('/delete/{id}/',[BailleurController::class, 'destroy'])->name('bailleurs.delete') ;
-Route::delete('/show/{id}/',[BailleurController::class, 'show'])->name('bailleurs.delete') ;
+Route::get('/bailleurlist',[BailleurController::class, 'bailleur']);
+Route::get('/bailleuredit/{id}/',[BailleurController::class, 'edit']);
+Route::put('/bailleuredit/{id}/',[BailleurController::class, 'update'])->name('bailleurs.update') ;
+Route::delete('/bailleurdelete/{id}/',[BailleurController::class, 'destroy'])->name('bailleurs.delete') ;
+Route::delete('/bailleurshow/{id}/',[BailleurController::class, 'show'])->name('bailleurs.delete') ;
 
 
  
- Route::get('/villecreate',[VilleController::class, 'create']);
+ Route::get('/villecreate',[VilleController::class, 'create'])->name('villes.create');
 Route::post('/villecreate',[VilleController::class, 'store'])->name('villes.store');
 Route::get('/ villelist',[VilleController::class, 'ville']);
-Route::get('/edit/{id}/',[VilleController::class, 'edit']);
-Route::put('/edit{id}/',[VilleController::class, 'update'])->name('villes.update') ;
-Route::delete('/delete/{id}/',[VilleController::class, 'destroy'])->name('villes.delete') ;
-Route::delete('/show/{id}/',[bailleurController::class, 'show'])->name('villes.delete') ;
+Route::get('/villedit/{id}/',[VilleController::class, 'edit']);
+Route::put('/villedit/{id}/',[VilleController::class, 'update'])->name('villes.update') ;
+Route::delete('/villedelete/{id}/',[VilleController::class, 'destroy'])->name('villes.delete') ;
+Route::delete('/villeshow/{id}/',[bailleurController::class, 'show'])->name('villes.delete') ;
  
 Auth::routes();
 

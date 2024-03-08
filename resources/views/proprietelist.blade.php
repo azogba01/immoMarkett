@@ -38,9 +38,9 @@
       <td>{{$item->prix}}</td>
       <td>{{$item->superficie}}</td>
       <td>{{$item->condition}}</td>
-         <td><a href="/edit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
+         <td><a href="/proprietedit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
         <td>
-        <form action="/delete/{{$item->id}}" method="POST">
+        <form action="/proprietedelete/{{$item->id}}" method="POST">
            @csrf
            @method('delete')
            <button class="btn btn-danger" type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')" >Supprimer</button> 

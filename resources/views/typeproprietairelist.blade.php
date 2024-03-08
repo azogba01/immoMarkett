@@ -26,9 +26,9 @@
     <tr>
       <th scope="row">{{$item->id}}</th>
       <td>{{$item->libelle}}</td>
-          <td><a href="/edit/{{ $item->id }}">
+          <td><a href="/typeproprietairedit/{{ $item->id }}">
             <button class="btn btn-primary">Modifier </button>
-      <td><form action="/delete/{{ $item->id }}" method ="POST">
+      <td><form action="/typeproprietairedelete/{{ $item->id }}" method ="POST">
         @csrf
         @method('Delete')
         <button type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')"> Supprimer </button> </a>

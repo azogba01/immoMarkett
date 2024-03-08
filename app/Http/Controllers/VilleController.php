@@ -19,15 +19,15 @@ class VilleController extends Controller
         return view('villecreate');
     }
 
-     public function store( Request $request)
+     public function store(Request $request)
     {
-         Ville::create([
-        'nomville'=>$request->input('nomville'),
-       ]);
-       return redirect('/villelist')->with('success', 'typeproprietaire ajouté(e) avec succes');
+        Ville::create([
+            'nomville'=>$request->input('nomville'),
+           ]);
+       return redirect('/villelist')->with('success', 'ville ajouté(e) avec succes');
     }
  
-    public function edit($id)
+    public function edit(int $id)
     {
         $ville = Ville::findOrFail($id);
         return view('villeedite', compact('ville'));
