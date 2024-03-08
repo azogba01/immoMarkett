@@ -22,8 +22,7 @@ class VilleController extends Controller
      public function store(Request $request)
     {
         Ville::create([
-            'nomville'=>$request->input('nomville'),
-           ]);
+            'nomville'=>$request->input('nomville'), ]);
        return redirect('/villelist')->with('success', 'ville ajouté(e) avec succes');
     }
  
