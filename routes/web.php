@@ -80,3 +80,4 @@ Route::delete('/villeshow/{id}/',[bailleurController::class, 'show'])->name('vil
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\FrontController::class, 'accueil'])->name('home');
+ 
