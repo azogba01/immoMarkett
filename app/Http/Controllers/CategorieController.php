@@ -15,25 +15,25 @@ class CategorieController extends Controller
     
      public function categorie(){
         $categorie=Categorie::latest()->get();
-        return view('categorielist',compact('categorie'));
+        return view('admin.categorielist',compact('categorie'));
     } 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view ('createcategorie');
+        return view ('/admin.createcategorie');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly ccreated resource in storage.
      */
     public function store( Request $request)
     {
          categorie::create([
         'libelle'=>$request->input('libelle'),
        ]);
-       return redirect('/categorielist')->with('success', 'Categorie ajouté(e) avec succes');
+       return redirect('admin.categorielist')->with('success', 'Categorie ajouté(e) avec succes');
     }
  
     /**
@@ -44,7 +44,7 @@ class CategorieController extends Controller
 {
     $categorie = Categorie::findOrFail($id);
 
-    return view('/categoriedit', compact('categorie'));
+    return view('/admin.categoriedit', compact('categorie'));
 }
 
 
@@ -57,7 +57,7 @@ class CategorieController extends Controller
         Categorie::Where('id',$id)->update([
         'libelle'=>$request->input('libelle')
     ]);  
-       return redirect('/categorielist')->with('success', 'La modification a été effectuer avec succes');
+       return redirect('/admin.categorielist')->with('success', 'La modification a été effectuer avec succes');
     }
 
 
@@ -67,6 +67,6 @@ class CategorieController extends Controller
     public function destroy(string $id)
     {
        Categorie::destroy($id);
-       return redirect('/categorielist')->with('success', 'Suppression effectuer');
+       return redirect('/admin.categorielist')->with('success', 'Suppression effectuer');
     }
 }

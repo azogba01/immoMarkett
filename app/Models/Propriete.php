@@ -9,7 +9,7 @@ class Propriete extends Model
 {
     use HasFactory;
         protected $fillable=[
-     'id','etat','prix', 'superficie', 'condition'];
+     'id','etat','prix', 'superficie', 'condition','propriete_image','status'];
 
         public function proprietes(){
         return $this->hasMany(Propriete::class);
