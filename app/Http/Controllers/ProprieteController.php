@@ -35,6 +35,7 @@ class ProprieteController extends Controller
             'prix'=> $request->input('prix'),
             'superficie'=> $request->input('superficie'),
             'condition'=> $request->input('condition'),
+            'image'=> $request->input('image'),
         ]);
         return redirect('/proprietecreate');
     }
@@ -68,6 +69,8 @@ class ProprieteController extends Controller
             'prix'=> $request->input('prix'),
             'superficie'=> $request->input('superficie'),
             'condition'=> $request->input('condition'),
+            'image'=> $request->input('image'),
+
         ]);
         return redirect('/proprietelist');
     }
