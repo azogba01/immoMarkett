@@ -14,6 +14,8 @@ class VilleController extends Controller
         return view('villelist', compact('villes'));
     }
 
+
+    
     public function create()
     {
         return view('villecreate');

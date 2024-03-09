@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('prix');
             $table->integer('superficie');
             $table->string('condition');
+            $table->integer('status');
+            $table->string('propriete_image');
             //  $table->foreign('proprietaire_id')
             //          ->references('id')
             //          ->on('proprietaires')
