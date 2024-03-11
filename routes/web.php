@@ -8,9 +8,6 @@ use App\Http\Controllers\TypeproprietaireController;
 use App\Http\Controllers\VilleController ;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\BailleurController;
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
