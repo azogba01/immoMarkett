@@ -30,16 +30,8 @@ class ProprieteController extends Controller
     public function store(Request $request)
     {
         //
-<<<<<<< HEAD
-        Propriete::create([
-            'etat'=> $request->input('etat'),
-            'prix'=> $request->input('prix'),
-            'superficie'=> $request->input('superficie'),
-            'condition'=> $request->input('condition'),
-            'image'=> $request->input('image'),
-        ]);
-        return redirect('/proprietecreate');
-=======
+ 
+       
         
         Propriete::create([
             'etat'=> $request->input('etat'),
@@ -84,7 +76,7 @@ class ProprieteController extends Controller
         // $propriete ->save();
         // return redirect()->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
 
->>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
+// >>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
     }
 
     /**
