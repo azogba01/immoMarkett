@@ -23,13 +23,20 @@
             </div>
     @endif
             {{--<p class="card-description"> ajout </p> --}}
-            <form class="forms-sample" action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
+            <form class="forms-sample" action="{{ route('bailleur.store') }}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
-                <label for="exampleInputUsername1">Libelle</label>
-                <input type="text" class="form-control" name="libelle" id="libelle" placeholder="Libelle">
+                <label for="exampleInputUsername1">Nom</label>
+                <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom">
               </div>
-
+              <div class="form-group">
+                <label for="exampleInputUsername1">Prénom</label>
+                <input type="text" class="form-control" name="prenom" id="libelle" placeholder="Prénom">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Télephone</label>
+                <input type="text" class="form-control" name="tel" id="libelle" placeholder="Télephone">
+              </div>
               {{-- <form action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="nom">Libelle :</label>

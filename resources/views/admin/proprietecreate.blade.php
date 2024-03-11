@@ -1,5 +1,5 @@
-@extends('layout.app')
-@section('contenupage')
+@extends('admin.app')
+@section('admincontent')
 <section>
   <br>
   <br>
@@ -23,7 +23,7 @@
          <input type="integer" name="superficie" required> <br><br>
          <label for="condition">Condition :</label>
          <input type="text" name="condition" required> <br><br>
-         <label for="condition">Image :</label>
+         <label for="propriete_image">Image :</label>
          <input type="file" name="propriete_image" required> <br><br>
            <button type="submit">Envoyer</button>
  

@@ -13,7 +13,7 @@ class ProprieteController extends Controller
     public function propriete()
     {
         $propriete = Propriete::all();
-        return view('proprietelist', compact('propriete'));
+        return view('/admin.proprietelist', compact('propriete'));
     }
 
     /**
@@ -21,7 +21,7 @@ class ProprieteController extends Controller
      */
     public function create()
     {
-        return view('proprietecreate');
+        return view('/admin.proprietecreate');
     }
 
     /**
@@ -29,8 +29,7 @@ class ProprieteController extends Controller
      */
     public function store(Request $request)
     {
-        //
-<<<<<<< HEAD
+        
         Propriete::create([
             'etat'=> $request->input('etat'),
             'prix'=> $request->input('prix'),
@@ -38,8 +37,7 @@ class ProprieteController extends Controller
             'condition'=> $request->input('condition'),
             'image'=> $request->input('image'),
         ]);
-        return redirect('/proprietecreate');
-=======
+        return redirect('/admin.proprietecreate');
         
         // Propriete::create([
         //     'etat'=> $request->input('etat'),
@@ -80,9 +78,9 @@ class ProprieteController extends Controller
         $propriete ->propriete_image=$fileNametostore;
         $propriete ->status=1;
         $propriete ->save();
-        return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
+        return redirect('/admin.proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
 
->>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
+
     }
 
     /**

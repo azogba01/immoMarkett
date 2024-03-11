@@ -22,7 +22,7 @@ class TypeproprietaireController extends Controller
      */
     public function create()
     {
-        return view ('typeproprietairecreate');
+        return view ('/admin.typeproprietairecreate');
     }
 
     /**
@@ -33,7 +33,7 @@ class TypeproprietaireController extends Controller
          Typeproprietaire::create([
         'libelle'=>$request->input('libelle'),
        ]);
-       return redirect('/typeproprietairelist')->with('success', 'typeproprietaire ajouté(e) avec succes');
+       return redirect('/admin.typeproprietairelist')->with('success', 'typeproprietaire ajouté(e) avec succes');
     }
  
     /**
@@ -43,7 +43,7 @@ class TypeproprietaireController extends Controller
 {
     $typeproprietaire = Typeproprietaire::findOrFail($id);
 
-    return view('typeproprietaireedite', compact('typeproprietaireedite'));
+    return view('/admin.typeproprietaireedite', compact('typeproprietaireedite'));
 }
     /**
      * Update the specified resource in storage.
@@ -53,7 +53,7 @@ class TypeproprietaireController extends Controller
     { 
         Typeproprietaire::Where('id',$id)->update([
         'libelle'=>$request->input('libelle')]);  
-       return redirect('/typeproprietairelist')->with('success', 'La modification a été effectuer avec succes');
+       return redirect('/admin.typeproprietairelist')->with('success', 'La modification a été effectuer avec succes');
     }
     /**
      * Remove the specified resource from storage.
@@ -61,7 +61,7 @@ class TypeproprietaireController extends Controller
     public function destroy(string $id)
     {
        Typeproprietaire::destroy($id);
-       return redirect('/typeproprietairelist')->with('success', 'Suppression effectuer');
+       return redirect('/admin.typeproprietairelist')->with('success', 'Suppression effectuer');
     }
 }
 
