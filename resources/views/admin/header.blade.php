@@ -158,8 +158,8 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{('/createcategorie')}}">ajouter une categorie</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{('/categorielist')}}">Liste des categories</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/createcategorie')}}">ajouter une categorie</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/categorielist')}}">Liste des categories</a></li>
                   </ul>
               </div>
             </li>

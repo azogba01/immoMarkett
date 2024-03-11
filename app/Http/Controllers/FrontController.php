@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
+use App\Models\Propriete;
 class FrontController extends Controller
 {
      
     public function accueil(){
-        return view('Front.accueil');
+        $propriete = Propriete::all();
+        return view('Front.accueil', compact('propriete'));
        }
        public function about(){
         return view('Front.about');

@@ -15,7 +15,7 @@ class CategorieController extends Controller
     
      public function categorie(){
         $categorie=Categorie::latest()->get();
-        return view('admin.categorielist',compact('categorie'));
+        return view('/admin.categorielist',compact('categorie'));
     } 
     /**
      * Show the form for creating a new resource.
@@ -28,12 +28,13 @@ class CategorieController extends Controller
     /**
      * Store a newly ccreated resource in storage.
      */
+
     public function store( Request $request)
     {
-         categorie::create([
+        Categorie::create([
         'libelle'=>$request->input('libelle'),
        ]);
-       return redirect('admin.categorielist')->with('success', 'Categorie ajouté(e) avec succes');
+       return redirect('/admin.categorielist')->with('success', 'Categorie ajouté(e) avec succes');
     }
  
     /**
