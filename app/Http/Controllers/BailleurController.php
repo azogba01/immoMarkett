@@ -14,7 +14,7 @@ class BailleurController extends Controller
     public function bailleur()
     {
         $bailleurs = Bailleur::all();
-        return view('bailleurlist', compact('bailleurs'));
+        return view('/admin.bailleurlist', compact('bailleurs'));
     }
 
     /**
@@ -22,7 +22,7 @@ class BailleurController extends Controller
      */
     public function create()
     {
-        return view('bailleurcreate');
+        return view('/admin.bailleurcreate');
     }
 
     /**
@@ -36,7 +36,7 @@ class BailleurController extends Controller
             'prenom'=> $request->input('prenom'),
             'tel'=> $request->input('tel'),
         ]);
-        return redirect('/bailleurlist');
+        return redirect('/admin.bailleurlist');
     }
 
     /**
@@ -45,7 +45,7 @@ class BailleurController extends Controller
     public function show(string $id)
     {
         $bailleurs = Bailleur::findOrFail($id);
-        return view('bailleur.show', compact('bailleurs'));
+        return view('/admin.bailleurshow', compact('bailleurs'));
     }
 
     /**
@@ -55,7 +55,7 @@ class BailleurController extends Controller
     {
         $bailleur = Bailleur::findOrFail($id);
         
-        return view('/bailleuredite', compact('bailleur'));
+        return view('/admin.bailleuredite', compact('bailleur'));
 
     }
 
@@ -75,7 +75,7 @@ class BailleurController extends Controller
             'prenom'=> $request->input('prenom'),
             'tel'=> $request->input('tel'),
         ]);
-        return redirect('/bailleurlist');
+        return redirect('/admin.bailleurlist');
     }
 
     /**
@@ -85,7 +85,7 @@ class BailleurController extends Controller
     public function destroy(string $id)
     {
         Bailleur::destroy($id);
-        return redirect('/bailleurlist');
+        return redirect('/admin.bailleurlist');
     }
 }
 

@@ -170,8 +170,8 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/buttons.html">ajouter une propriete</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/typography.html">Liste des proprietes</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{('/proprietecreate')}}">ajouter une propriete</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{('/proprietelist')}}">Liste des proprietes</a></li>
                 </ul>
               </div>
             </li>

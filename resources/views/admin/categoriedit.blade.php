@@ -1,5 +1,5 @@
-@extends('admin.app')
-@section('admincontent')
+@extends('layout.app')
+@section('contenupage')
  
    <marquee behavior="" direction=""><h1>Veuillez proceder a la modification</h1></marquee>
  

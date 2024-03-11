@@ -13,7 +13,7 @@ class ProprieteController extends Controller
     public function propriete()
     {
         $propriete = Propriete::all();
-        return view('proprietelist', compact('propriete'));
+        return view('/admin.proprietelist', compact('propriete'));
     }
 
     /**
@@ -21,7 +21,7 @@ class ProprieteController extends Controller
      */
     public function create()
     {
-        return view('proprietecreate');
+        return view('/admin.proprietecreate');
     }
 
     /**
@@ -30,8 +30,16 @@ class ProprieteController extends Controller
     public function store(Request $request)
     {
         //
- 
-       
+<<<<<<< HEAD
+        Propriete::create([
+            'etat'=> $request->input('etat'),
+            'prix'=> $request->input('prix'),
+            'superficie'=> $request->input('superficie'),
+            'condition'=> $request->input('condition'),
+            'image'=> $request->input('image'),
+        ]);
+        return redirect('/proprietecreate');
+=======
         
         Propriete::create([
             'etat'=> $request->input('etat'),
@@ -63,20 +71,20 @@ class ProprieteController extends Controller
         // }
         // else{
             
-        //     $fileNametostore='noimage.jpg';
-        // }
-        // $propriete =new Propriete();
-        // // $propriete ->user_id = auth()->id();
-        // $propriete ->nom=$request->input('nom');
-        // $propriete ->prix=$request->input('prix');
-        // $propriete ->superficie=$request->input('superficie');
-        // $propriete ->condition=$request->input('condition'); 
-        // // $propriete ->propriete_image=$fileNametostore;
-        // $propriete ->status=1;
-        // $propriete ->save();
-        // return redirect()->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
+            $fileNametostore='noimage.jpg';
+        }
+        $propriete =new Propriete();
+        $propriete ->user_id = auth()->id();
+        $propriete ->nom=$request->input('nom');
+        $propriete ->prix=$request->input('prix');
+        $propriete ->superficie=$request->input('superficie');
+        $propriete ->condition=$request->input('condition'); 
+        $propriete ->propriete_image=$fileNametostore;
+        $propriete ->status=1;
+        $propriete ->save();
+        return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
 
-// >>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
+>>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
     }
 
     /**

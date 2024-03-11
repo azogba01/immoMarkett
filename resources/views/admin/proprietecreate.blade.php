@@ -23,8 +23,8 @@
          <input type="integer" name="superficie" required> <br><br>
          <label for="condition">Condition :</label>
          <input type="text" name="condition" required> <br><br>
-         {{-- <label for="condition">Image :</label>
-         <input type="file" name="propriete_image" required> <br><br> --}}
+         <label for="condition">Image :</label>
+         <input type="file" name="propriete_image" required> <br><br>
            <button type="submit">Envoyer</button>
  
  
