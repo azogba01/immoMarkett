@@ -39,33 +39,35 @@ class ProprieteController extends Controller
         ]);
         return redirect('/admin.proprietecreate');
         
-        // Propriete::create([
-        //     'etat'=> $request->input('etat'),
-        //     'prix'=> $request->input('prix'),
-        //     'superficie'=> $request->input('superficie'),
-        //     'condition'=> $request->input('condition'),
-        // ]);
-        // return redirect('/proprietecreate');
-        $this->validate($request, ['nom'=>'required|unique:proprietes',
-        'prix'=>'required',
-        'superficie'=>'required',
-        'condition'=>'required',
-        'prpriete_image'=>'image|nullable|max:1999']);
+        Propriete::create([
+            'etat'=> $request->input('etat'),
+            'prix'=> $request->input('prix'),
+            'superficie'=> $request->input('superficie'),
+            'condition'=> $request->input('condition'),
+            'status'=> $request->status=1,
+        ]);
+        return redirect('/proprietecreate');
+        // $this->validate($request, [
+        // 'nom'=>'required|unique:proprietes',
+        // 'prix'=>'required',
+        // 'superficie'=>'required',
+        // 'condition'=>'required',]);
+        // 'prpriete_image'=>'image|nullable|max:1999']);
 
-        if($request->hasFile('propriete_image')){
-           //1-select image with extension
-           $fileNameWithExt=$request->file('propriete_image')->getClientOriginalName();
-           //2-get just file name
-           $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
-           //3-get just extension
-            $extension = $request->file('propriete_image')->getClientOriginalExtension();
-           //4-file name store
-           $fileNametostore=$fileName.'_'.time().'.'.$extension;
-           //uplaoder l'image
-           $path=$request->file('propriete_image')->move('propriete_images/propriete_images',
-                      $fileNametostore);
-        }
-        else{
+        // if($request->hasFile('propriete_image')){
+        //    //1-select image with extension
+        //    $fileNameWithExt=$request->file('propriete_image')->getClientOriginalName();
+        //    //2-get just file name
+        //    $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+        //    //3-get just extension
+        //     $extension = $request->file('propriete_image')->getClientOriginalExtension();
+        //    //4-file name store
+        //    $fileNametostore=$fileName.'_'.time().'.'.$extension;
+        //    //uplaoder l'image
+        //    $path=$request->file('propriete_image')->move('propriete_images/propriete_images',
+        //               $fileNametostore);
+        // }
+        // else{
             
             $fileNametostore='noimage.jpg';
         }
@@ -78,8 +80,7 @@ class ProprieteController extends Controller
         $propriete ->propriete_image=$fileNametostore;
         $propriete ->status=1;
         $propriete ->save();
-        return redirect('/admin.proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
-
+        return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
 
     }
 

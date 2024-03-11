@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('image');
 
             $table->integer('status');
-            $table->string('propriete_image');
+            // $table->string('propriete_image');
             //  $table->foreign('proprietaire_id')
             //          ->references('id')
             //          ->on('proprietaires')

@@ -193,6 +193,7 @@
         <div id="property-carousel" class="swiper">
           <div class="swiper-wrapper">
 
+            @foreach ($propriete as $item)
             <div class="carousel-item-b swiper-slide">
               <div class="card-box-a card-shadow">
                 <div class="img-box-a">
@@ -201,15 +202,15 @@
                 <div class="card-overlay">
                   <div class="card-overlay-a-content">
                     <div class="card-header-a">
-                      {{-- <h2 class="card-title-a">
+                      <h2 class="card-title-a">
                         <a href="property-single.html">206 Mount
                           <br /> Olive Road Two</a>
-                      </h2> --}}
+                      </h2>
                     </div>
                     <div class="card-body-a">
                       <div class="price-box d-flex">
                         <span class="price-a">rent | $ 12.000</span>
-                    {{-- </div>
+                      </div>
                       <a href="#" class="link-a">Click here to view
                         <span class="bi bi-chevron-right"></span>
                       </a>
@@ -218,12 +219,12 @@
                       <ul class="card-info d-flex justify-content-around">
                         <li>
                           <h4 class="card-info-title">Area</h4>
-                          <span>340m
+                          <span>{{$item->superficie}}
                             <sup>2</sup>
                           </span>
                         </li>
                         <li>
-                          <h4 class="card-info-title">Beds</h4>
+                          <h4 class="card-info-title">{{$item->condition}}</h4>
                           <span>2</span>
                         </li>
                         <li>
@@ -255,9 +256,9 @@
                       </h2>
                     </div>
                     <div class="card-body-a">
-                      {{-- <div class="price-box d-flex">
+                      <div class="price-box d-flex">
                         <span class="price-a">rent | $ 12.000</span>
-                      </div> --}}
+                      </div>
                       <a href="property-single.html" class="link-a">Click here to view
                         <span class="bi bi-chevron-right"></span>
                       </a>
