@@ -39,7 +39,7 @@
               <label for="exampleFormControlSelect1">Categorie </label>
               <select class="form-control form-control-lg" name="id_categorie" id="exampleFormControlSelect1">
                 @foreach ($categorie as $item)
-                    <option value="{{$item->id_categorie}}">{{$item->libelle}}</option>
+                    <option value="{{$item->id}}">{{$item->libelle}}</option>
                 @endforeach
                  
               </select>
