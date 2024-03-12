@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Models\Propriete;
-
 use Illuminate\Http\Request;
-
 class ProprieteController extends Controller
 {
     /**
@@ -69,18 +66,18 @@ class ProprieteController extends Controller
         // }
         // else{
             
-            $fileNametostore='noimage.jpg';
-        }
-        $propriete =new Propriete();
-        $propriete ->user_id = auth()->id();
-        $propriete ->nom=$request->input('nom');
-        $propriete ->prix=$request->input('prix');
-        $propriete ->superficie=$request->input('superficie');
-        $propriete ->condition=$request->input('condition'); 
-        $propriete ->propriete_image=$fileNametostore;
-        $propriete ->status=1;
-        $propriete ->save();
-        return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
+            // $fileNametostore='noimage.jpg';
+        // }
+        // $propriete =new Propriete();
+        // $propriete ->user_id = auth()->id();
+        // $propriete ->nom=$request->input('nom');
+        // $propriete ->prix=$request->input('prix');
+        // $propriete ->superficie=$request->input('superficie');
+        // $propriete ->condition=$request->input('condition'); 
+        // $propriete ->propriete_image=$fileNametostore;
+        // $propriete ->status=1;
+        // $propriete ->save();
+        // return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
 
     }
 
