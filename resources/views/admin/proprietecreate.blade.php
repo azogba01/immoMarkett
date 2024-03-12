@@ -35,6 +35,15 @@
                 <option>VENDRE</option>
               </select>
             </div>
+             <div class="form-group">
+              <label for="exampleFormControlSelect1">Categorie </label>
+              <select class="form-control form-control-lg" name="id_categorie" id="exampleFormControlSelect1">
+                @foreach ($categorie as $item)
+                    <option value="{{$item->id_categorie}}">{{$item->libelle}}</option>
+                @endforeach
+                 
+              </select>
+            </div>
               <div class="form-group">
                 <label for="exampleInputUsername1">Prix</label>
                 <input type="text" class="form-control" name="prix" id="libelle" placeholder="Prix">

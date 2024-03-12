@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\Propriete;
+use App\Models\Categorie;
 use Illuminate\Http\Request;
 class ProprieteController extends Controller
 {
@@ -14,7 +15,8 @@ class ProprieteController extends Controller
     public function propriete()
     {
         $propriete = Propriete::all();
-        return view('/admin.proprietelist', compact('propriete'));
+        $categorie = Categorie::all();
+        return view('/admin.proprietelist', compact('propriete','categorie'));
     }
 
     /**
@@ -22,7 +24,8 @@ class ProprieteController extends Controller
      */
     public function create()
     {
-        return view('/admin.proprietecreate');
+        $categorie = Categorie::all();
+        return view('/admin.proprietecreate', compact('categorie'));
     }
 
     /**

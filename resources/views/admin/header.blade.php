@@ -150,20 +150,6 @@
                 <i class="icon-screen-desktop menu-icon"></i>
               </a>
             </li>
-            <li class="nav-item nav-category"><span class="nav-link">UI Elements</span></li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Categories</span>
-                <i class="icon-layers menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{url('/createcategorie')}}">ajouter une categorie</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{url('/categorielist')}}">Liste des categories</a></li>
-                  </ul>
-              </div>
-            </li>
-            @can('bailleur')
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Proprietes</span>
@@ -176,6 +162,20 @@
                 </ul>
               </div>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Categories de propriete</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/createcategorie')}}">ajouter une categorie de propriete</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/categorielist')}}">Liste des de propriete</a></li>
+                  </ul>
+              </div>
+            </li>
+            @can('bailleur')
+            
            @endcan
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
@@ -184,10 +184,42 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/bailleurlist')}}">Liste des bailleurs</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Type de bailleur</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/typebailleurcreate')}}">ajouter une propriete</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/typebailleurlist')}}">Liste des proprietes</a></li>
+                </ul>
+              </div>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Type abonnement</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/typeabonnementcreatelist')}}">Liste des bailleurs</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/typeabonnementlist')}}">Liste des bailleurs</a></li>
+                </ul>
+              </div>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Bailleurs</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
                   <li class="nav-item"> <a class="nav-link" href="{{url('/bailleurliste')}}">Liste des bailleurs</a></li>
-                
-                  {{-- <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/buttons.html">ajouter une bailleur</a></li> --}}
-                  {{-- <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/typography.html">Liste des bailleurs</a></li> --}}
                 </ul>
               </div>
             </li>

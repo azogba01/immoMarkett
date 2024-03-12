@@ -17,7 +17,7 @@
             </div> 
           </div>
           <div class="row">
-            <div class="col-md-4 grid-margin stretch-card">
+            {{-- <div class="col-md-4 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Sessions by channel</h4>
@@ -44,8 +44,8 @@
                   </div>
                 </div>
               </div>
-            </div> 
-            <div class="col-md-8 grid-margin stretch-card">
+            </div>  --}}
+            {{-- <div class="col-md-8 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body performane-indicator-card">
                   <div class="d-sm-flex">
@@ -75,7 +75,7 @@
                   <div id="performance-indicator-chart" class="ct-chart mt-4"></div>
                 </div>
               </div>
-            </div>
+            </div> --}}
           </div>
           <!-- Quick Action Toolbar Starts-->
           <div class="row quick-action-toolbar">
@@ -103,7 +103,7 @@
             </div>
           </div>
           <!-- Quick Action Toolbar Ends-->
-          <div class="row">
+          {{-- <div class="row">
             <div class="col-md-12 grid-margin">
               <div class="card">
                 <div class="card-body">
@@ -159,8 +159,8 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
+          </div> --}}
+          {{-- <div class="row">
             <div class="col-md-12 grid-margin">
               <div class="card">
                 <div class="card-body">
@@ -193,7 +193,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
