@@ -142,11 +142,11 @@
               </a>
             </li>
             <li class="nav-item nav-category">
-              <span class="nav-link">Dashboard</span>
+              <span class="nav-link">Tableau de bord</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/dashboard')}}">
-                <span class="menu-title">Dashboard</span>
+              <a class="nav-link" href="{{url('/')}}">
+                <span class="menu-title">Retour a l'accueil</span>
                 <i class="icon-screen-desktop menu-icon"></i>
               </a>
             </li>
