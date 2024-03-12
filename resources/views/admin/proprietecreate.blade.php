@@ -1,60 +1,61 @@
-@extends('admin.app')
-@section('admincontent')
+@extends('layout.app')
+@section('contenupage')
+<section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+ <marquee behavior="" direction=""><h1>Veuillez ajouter une salle de classe</h1></marquee>
+ @if(session('success'))
+     <div class="alert alert-success">
+         {{ session('success') }}
+     </div>
+ @endif
+     <form action="{{ route('propriete.store') }}" method="POST" enctype="multipart/form-data">
+         @csrf
+         <label for="etat">Etat :</label>
+         <input type="text" name="etat" required> <br><br>
+         <label for="prix">Prix :</label>
+         <input type="integer" name="prix" required> <br><br>
+         <label for="superficie">Superficie :</label>
+         <input type="integer" name="superficie" required> <br><br>
+         <label for="condition">Condition :</label>
+         <input type="text" name="condition" required> <br><br>
+         <label for="condition">Image :</label>
+         <input type="file" name="propriete_image" required> <br><br>
+           <button type="submit">Envoyer</button>
  
- <div class="main-panel">
-  <div class="content-wrapper">
-    <div class="page-header">
-      <h3 class="page-title"> Form elements </h3>
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Forms</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Form elements</li>
-        </ol>
-      </nav>
-    </div>
-    <div class="row">
-      <div class="col  grid-margin stretch-card">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Ajouter propriete</h4>
-            @if (session('success'))
-            <div class="alert alert-success">
-                {{session('success')}}
-            </div>
-    @endif
-            {{--<p class="card-description"> ajout </p> --}}
-            <form class="forms-sample" action="{{ route('propriete.store') }}" method="POST" enctype="multipart/form-data">
-              @csrf
-              <div class="form-group">
-                <label for="exampleInputUsername1">Etat</label>
-                <input type="text" class="form-control" name="etat" id="libelle" placeholder="etat">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputUsername1">Prix</label>
-                <input type="text" class="form-control" name="prix" id="libelle" placeholder="Prix">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputUsername1">Superficie</label>
-                <input type="text" class="form-control" name="superficie" id="libelle" placeholder="Superficie">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputUsername1">Condition</label>
-                <input type="text" class="form-control" name="condition" id="libelle" placeholder="condition">
-              </div>
-               {{-- <div class="form-group">
-                <label for="exampleInputUsername1">Image</label>
-                <input type="file" class="form-control" name="propriete_image" id="libelle" placeholder="Images">
-              </div> --}}
  
-              <button type="submit" class="btn btn-primary mr-2">Submit</button>
-              <button class="btn btn-light">Cancel</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-   
-</div>
+ </form>
+ 
+ <style>
+           form{
+            
+             width: 230px;
+             height: 200px;
+             margin-left: 600px;
+             border-radius: 20px;
+             background-color: rgba(54, 81, 133, 0.267);
+           }
+       form label{
+         margin-left: 50px;
+       }
+       form input{
+         margin-left: 20px;
+       }
+       form button{
+         margin-left: 150px;
+       }
+       
+       </style>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+</section>
 @endsection 

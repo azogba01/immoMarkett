@@ -9,38 +9,7 @@
         </div>
     
   @endif
-  {{-- <thead>
-    <tr>
-      <th scope="col">Num</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Action</th>
-      <th scope="col">Supression</th>
-      <th scope="col">Detail</th>
-      <button type='submit' class="btn btn-success" ><a href="createpropriete">Ajouter</a></button>
-   
-
-    </tr>
-  </thead>
-  <tbody>
-    @foreach ($propriete as $item)
-    <tr>
-      <th scope="row">{{$item->id}}</th>
-      <td>{{$item->libelle}}</td>
-         {{-- <td><a href="/edit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
-        <td>
-        <form action="/proprietes/{{$item->id}}" method="POST">
-           @csrf
-           @method('delete')
-           <button class="btn btn-danger" type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')" >Supprimer</button> 
-        </form>  
-      </td>
-      <td><a href="/proprietes/{{$item->id}}"><button class="btn btn-success">Detail</button></a></td>
-      // <td><a href="{{ route('propriete.edit', ['id' => $item->id]) }}">Editer</a></td>
-    </tr> --}}
-          
-
-  {{-- </tbody>
-</table> --}}  
+    
 <div class="row">
   <div class="col-lg-6 grid-margin stretch-card">
     <div class="card">
@@ -60,7 +29,7 @@
       <th scope="col">Modifier</th>
       <th scope="col">Supression</th>
       <th scope="col">Detail</th>
-      <button type='submit' class="btn btn-success" ><a href="createpropriete">Ajouter</a></button>
+      <button type='submit' class="btn btn-success" ><a href="{{url('/proprietecreate')}}">Ajouter</a></button>
    
             </tr>
           </thead>

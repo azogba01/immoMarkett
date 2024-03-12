@@ -26,16 +26,8 @@ class ProprieteController extends Controller
      */
     public function store(Request $request)
     {
-        
-        Propriete::create([
-            'etat'=> $request->input('etat'),
-            'prix'=> $request->input('prix'),
-            'superficie'=> $request->input('superficie'),
-            'condition'=> $request->input('condition'),
-            'image'=> $request->input('image'),
-        ]);
-        return redirect('/admin.proprietecreate');
-        
+        //
+ 
         Propriete::create([
             'etat'=> $request->input('etat'),
             'prix'=> $request->input('prix'),
@@ -43,7 +35,17 @@ class ProprieteController extends Controller
             'condition'=> $request->input('condition'),
             'status'=> $request->status=1,
         ]);
-        return redirect('/proprietecreate');
+        return redirect('/admin.proprietecreate');
+    }
+        
+        // Propriete::create([
+        //     'etat'=> $request->input('etat'),
+        //     'prix'=> $request->input('prix'),
+        //     'superficie'=> $request->input('superficie'),
+        //     'condition'=> $request->input('condition'),
+        //     'status'=> $request->status=1,
+        // ]);
+        // return redirect('/proprietecreate');
         // $this->validate($request, [
         // 'nom'=>'required|unique:proprietes',
         // 'prix'=>'required',
@@ -66,7 +68,11 @@ class ProprieteController extends Controller
         // }
         // else{
             
+<<<<<<< HEAD
             // $fileNametostore='noimage.jpg';
+=======
+        //     $fileNametostore='noimage.jpg';
+>>>>>>> 3b438690883da016085a403b7c3ee65bd72221a4
         // }
         // $propriete =new Propriete();
         // $propriete ->user_id = auth()->id();
@@ -79,7 +85,8 @@ class ProprieteController extends Controller
         // $propriete ->save();
         // return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
 
-    }
+// >>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
+    
 
     /**
      * Display the specified resource.
@@ -87,7 +94,7 @@ class ProprieteController extends Controller
     public function show(string $id)
     {
         $propriete = Propriete::findOrFail($id);
-        return view('propriete.show', compact('propriete'));
+        return view('/admin.propriete.show', compact('propriete'));
     }
 
     /**
@@ -96,7 +103,7 @@ class ProprieteController extends Controller
     public function edit(string $id)
     {
         $propriete = Propriete::findOrFail($id);
-        return view('proprieteedite', compact('propriete'));
+        return view('admin.proprieteedite', compact('propriete'));
 
     }
 
@@ -110,10 +117,10 @@ class ProprieteController extends Controller
             'prix'=> $request->input('prix'),
             'superficie'=> $request->input('superficie'),
             'condition'=> $request->input('condition'),
-            'image'=> $request->input('image'),
+            'status'=> $request->status=1,
 
         ]);
-        return redirect('/proprietelist');
+        return redirect('/admin.proprietelist');
     }
 
     /**

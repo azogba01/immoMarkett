@@ -61,6 +61,24 @@ input[type="submit"]:hover {
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        <div class="row mb-3">
+                            {{-- <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('role abonement') }}</label> --}}
+
+                            <div class="col-md-6">
+                                <input id="role" type="hidden" class="form-control @error('role') is-invalid @enderror" name="role" value="{{'bailleur'}}"  required autocomplete="role" autofocus>
+
+                                 
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="type" class="col-md-4 col-form-label text-md-end">{{ __('type abonement') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="type" type="text" class="form-control @error('type') is-invalid @enderror" name="type"   required autocomplete="type" autofocus>
+
+                                 
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>

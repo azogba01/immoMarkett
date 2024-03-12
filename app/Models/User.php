@@ -20,6 +20,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'type',
+        'role',
         'password',
     ];
 
@@ -32,6 +34,10 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+       public function isBailleur()
+        {
+            return $this->role === 'bailleur';
+        }
 
     /**
      * The attributes that should be cast.
