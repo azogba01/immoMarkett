@@ -13,8 +13,8 @@
         <input type="text" name="superficie" value="{{$propriete->superficie}}" required> <br> <br>
          <label for="condition">Condition :</label>
         <input type="text" name="condition" value="{{$propriete->condition}}" required> <br> <br>
-        <label for="condition">Images :</label>
-        <input type="file" name="propriete_image" value="{{$propriete->propriete_image}}" required> <br> <br>
+        {{-- <label for="condition">Images :</label>
+        <input type="file" name="propriete_image" value="{{$propriete->propriete_image}}" required> <br> <br> --}}
         <button type="submit" href="">Enregistrer</button>
      <section>        
 </form>

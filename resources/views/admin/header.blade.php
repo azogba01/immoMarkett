@@ -133,7 +133,7 @@
                 </div>
                 <div class="text-wrapper">
                   <p class="profile-name">{{ Auth::user()->name }}</p>
-                  <p class="designation">Administrator</p>
+                  <p class="designation">{{ Auth::user()->role }}</p>
                 </div>
                 <div class="icon-container">
                   <i class="icon-bubbles"></i>
@@ -151,6 +151,7 @@
               </a>
             </li>
             <li class="nav-item nav-category"><span class="nav-link">UI Elements</span></li>
+            @can('admin')
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Categories</span>
@@ -163,7 +164,8 @@
                   </ul>
               </div>
             </li>
-            @can('bailleur')
+            @endcan
+            @can('bailleurm')
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Proprietes</span>
