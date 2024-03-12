@@ -68,11 +68,11 @@ class ProprieteController extends Controller
         // }
         // else{
             
-<<<<<<< HEAD
+
             // $fileNametostore='noimage.jpg';
-=======
+
         //     $fileNametostore='noimage.jpg';
->>>>>>> 3b438690883da016085a403b7c3ee65bd72221a4
+
         // }
         // $propriete =new Propriete();
         // $propriete ->user_id = auth()->id();
@@ -85,7 +85,6 @@ class ProprieteController extends Controller
         // $propriete ->save();
         // return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
 
-// >>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
     
 
     /**

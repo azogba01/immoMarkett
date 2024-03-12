@@ -150,7 +150,7 @@
                 <i class="icon-screen-desktop menu-icon"></i>
               </a>
             </li>
-            <li class="nav-item nav-category"><span class="nav-link">UI Elements</span></li>
+            {{-- <li class="nav-item nav-category"><span class="nav-link">UI Elements</span></li> --}}
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Categories</span>
@@ -163,7 +163,32 @@
                   </ul>
               </div>
             </li>
-            @can('bailleur')
+               <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Les types abonnement</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/typeabonnementcreate')}}">ajouter un type d'abonnement</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/typeabonnementlist')}}">Liste des abonnement payés</a></li>
+                  </ul>
+              </div>
+            </li>
+               <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Les types de bailleurs</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/typebailleurcreate')}}">ajouter une type de proprietaire</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{url('/typebailleurlist')}}">Liste des types de proprietaire</a></li>
+                  </ul>
+              </div>
+            </li>
+
+           
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Proprietes</span>
@@ -176,7 +201,7 @@
                 </ul>
               </div>
             </li>
-            @endcan
+           
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Bailleurs</span>
@@ -184,7 +209,6 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="{{url('/bailleurcreate')}}">ajouter une bailleur</a></li>
                   <li class="nav-item"> <a class="nav-link" href="{{url('/bailleurliste')}}">Liste des bailleurs</a></li>
                 
                   {{-- <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/buttons.html">ajouter une bailleur</a></li> --}}
@@ -192,7 +216,7 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Categories</span>
                 <i class="icon-layers menu-icon"></i>
@@ -203,8 +227,8 @@
                   <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/typography.html">Liste des categories</a></li>
                 </ul>
               </div>
-            </li>
-            <li class="nav-item">
+            </li> --}}
+            {{-- <li class="nav-item">
               <a class="nav-link" href="admin/pages/icons/simple-line-icons.html">
                 <span class="menu-title">Icons</span>
                 <i class="icon-globe menu-icon"></i>
@@ -215,8 +239,8 @@
                 <span class="menu-title">Form Elements</span>
                 <i class="icon-book-open menu-icon"></i>
               </a>
-            </li>
-            <li class="nav-item">
+            </li> --}}
+            {{-- <li class="nav-item">
               <a class="nav-link" href="admin/pages/charts/chartist.html">
                 <span class="menu-title">Charts</span>
                 <i class="icon-chart menu-icon"></i>
@@ -243,7 +267,7 @@
                   <li class="nav-item"> <a class="nav-link" href="admin/pages/samples/blank-page.html"> Blank Page </a></li>
                 </ul>
               </div>
-            </li>
+            </li> --}}
             {{-- <li class="nav-item pro-upgrade">
               <span class="nav-link">
                 <a class="btn btn-block px-0 btn-rounded btn-upgrade" href="https://www.bootstrapdash.com/product/immomaket-admin-template/" target="_blank"> <i class="icon-badge mx-2"></i> Upgrade to Pro</a>

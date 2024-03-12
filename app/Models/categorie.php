@@ -12,7 +12,8 @@ class categorie extends Model
         protected $fillable=[
        'id','libelle'];
 
-    //     public function biens(){
-    //     return $this->hasMany(Bien::class);
-    //  }
+   public function propriete()
+    {
+        return $this->belongsTo(Categorie::class);
+    }
 }

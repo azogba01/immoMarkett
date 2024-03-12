@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HomeController ;
 use App\Http\Controllers\ProprieteController ;
-use App\Http\Controllers\TypeproprietaireController;
+use App\Http\Controllers\TypebailleurController;
 use App\Http\Controllers\VilleController ;
 use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\TypeabonnementController;
 use App\Http\Controllers\BailleurController;
 /*
 |--------------------------------------------------------------------------
@@ -48,12 +49,12 @@ Route::put('/proprietedit/{id}/',[ProprieteController::class, 'update'])->name('
 Route::delete('/proprietedelete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
 
 
-Route::get('/typeproprietairecreate',[TypeproprietaireController::class, 'create'])->name('typeproprietaires.create');
-Route::post('/typeproprietairecreate',[TypeproprietaireController::class, 'store'])->name('typeproprietaires.store');
-Route::get('/typeproprietairelist',[TypeproprietaireController::class, 'typeproprietaire']);
-Route::get('/typeproprietairedit/{id}/',[TypeproprietaireController::class, 'edit']);
-Route::put('/typeproprietairedit/{id}/',[TypeproprietaireController::class, 'update'])->name('typeproprietaires.update') ;
-Route::delete('/typeproprietairedelete/{id}/',[TypeproprietaireController::class, 'destroy'])->name('typeproprietaires.delete') ;
+Route::get('/typebailleurcreate',[TypebailleurController::class, 'create'])->name('typebailleurs.create');
+Route::post('/typebailleurcreate',[TypebailleurController::class, 'store'])->name('typebailleurs.store');
+Route::get('/typebailleurlist',[TypebailleurController::class, 'typebailleur']);
+Route::get('/typebailleurdit/{id}/',[TypebailleurController::class, 'edit']);
+Route::put('/typebailleurdit/{id}/',[TypebailleurController::class, 'update'])->name('typebailleurs.update') ;
+Route::delete('/typebailleurdelete/{id}/',[TypebailleurController::class, 'destroy'])->name('typebailleurs.delete') ;
 
 
 Route::get('/bailleurcreate',[BailleurController::class, 'create']);
@@ -66,13 +67,21 @@ Route::delete('/bailleurshow/{id}/',[BailleurController::class, 'show'])->name('
 
 
  
- Route::get('/villecreate',[VilleController::class, 'create'])->name('villes.create');
+Route::get('/villecreate',[VilleController::class, 'create'])->name('villes.create');
 Route::post('/villecreate',[VilleController::class, 'store'])->name('villes.store');
 Route::get('/ villelist',[VilleController::class, 'ville']);
 Route::get('/villedit/{id}/',[VilleController::class, 'edit']);
 Route::put('/villedit/{id}/',[VilleController::class, 'update'])->name('villes.update') ;
 Route::delete('/villedelete/{id}/',[VilleController::class, 'destroy'])->name('villes.delete') ;
-Route::delete('/villeshow/{id}/',[bailleurController::class, 'show'])->name('villes.delete') ;
+Route::delete('/villeshow/{id}/',[VilleController::class, 'show'])->name('villes.delete') ;
+
+Route::get('/typeabonnementcreate',[TypeabonnementController::class, 'create'])->name('typeabonnements.create');
+Route::post('/typeabonnementcreate',[TypeabonnementController::class, 'store'])->name('typeabonnements.store');
+Route::get('/ typeabonnementlist',[TypeabonnementController::class, 'typeabonnement']);
+Route::get('/typeabonnementdit/{id}/',[TypeabonnementController::class, 'edit']);
+Route::put('/typeabonnementdit/{id}/',[TypeabonnementController::class, 'update'])->name('typeabonnements.update') ;
+Route::delete('/typeabonnementdelete/{id}/',[TypeabonnementController::class, 'destroy'])->name('typeabonnements.delete') ;
+Route::delete('/typeabonnementshow/{id}/',[TypeabonnementController::class, 'show'])->name('typeabonnements.delete') ;
  
 Auth::routes();
 

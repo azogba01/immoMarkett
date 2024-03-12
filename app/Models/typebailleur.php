@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Typeabonnement extends Model
+class typebailleur extends Model
 {
     use HasFactory;
-        protected $fillable=[
-     'id','nom','montant', 'duree'];
+     protected $fillable=[
+     'id','libelle'];
 
 }
