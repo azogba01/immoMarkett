@@ -37,6 +37,7 @@ class ProprieteController extends Controller
             'prix'=> $request->input('prix'),
             'superficie'=> $request->input('superficie'),
             'condition'=> $request->input('condition'),
+            'id_categorie'=> $request->input('id_ategorie'),
             'status'=> $request->status=1,
         ]);
         return redirect('/admin.proprietecreate');

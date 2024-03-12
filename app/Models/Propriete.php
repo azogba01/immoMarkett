@@ -11,7 +11,8 @@ class Propriete extends Model
         protected $fillable=[
      'id','etat','prix', 'superficie', 'id_categorie' ,'condition','propriete_image','status'];
 
-        public function categorie(){
-        return $this->hasOne(Propriete::class);
-}
+        public function categorie()
+    {
+        return $this->belongsTo(Categorie::class);
+    }
 }

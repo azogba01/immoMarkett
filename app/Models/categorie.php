@@ -14,6 +14,6 @@ class categorie extends Model
 
    public function propriete()
     {
-        return $this->belongsTo(Categorie::class);
+        return $this->hasMany(Propriete::class);
     }
 }
