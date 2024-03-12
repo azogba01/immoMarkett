@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Models\Propriete;
-
 use Illuminate\Http\Request;
-
 class ProprieteController extends Controller
 {
     public function __construct()
@@ -75,7 +72,11 @@ class ProprieteController extends Controller
         // }
         // else{
             
+
+            // $fileNametostore='noimage.jpg';
+
         //     $fileNametostore='noimage.jpg';
+
         // }
         // $propriete =new Propriete();
         // $propriete ->user_id = auth()->id();
@@ -88,7 +89,6 @@ class ProprieteController extends Controller
         // $propriete ->save();
         // return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
 
-// >>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
     
 
     /**

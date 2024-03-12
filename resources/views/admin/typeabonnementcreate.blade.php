@@ -16,30 +16,26 @@
       <div class="col  grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Ajouter categorie</h4>
+            <h4 class="card-title">Ajouter typeabonnement</h4>
             @if (session('success'))
             <div class="alert alert-success">
                 {{session('success')}}
             </div>
     @endif
             {{--<p class="card-description"> ajout </p> --}}
-            <form class="forms-sample" action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
+            <form class="forms-sample" action="{{ route('typeabonnements.store') }}" method="POST" enctype="multipart/form-data">
               @csrf
-                <div class="form-group">
-              <label for="exampleFormControlSelect1">Catégorie</label>
-              <select class="form-control form-control-lg" name="libelle" id="exampleFormControlSelect1">
-                <option>Appartements</option>
-                <option>Bureaux</option>
-                <option>Magasins</option>
-                <option>Restaurants</option>
-                <option>Hôtels</option>
-                <option>Entrepôts</option>
-                <option>Terrains résidentiels</option>
-                <option>Terrains commerciaux </option>
-                <option>Terrains agricoles</option>
-                <option>Propriétés de luxe</option>
-                <option>Maisons individuelles</option>
-              </select>
+            <div class="form-group">
+                <label for="exampleInputUsername1">Libelle</label>
+                <input type="text" class="form-control" name="nom" id="libelle" placeholder="Echéance">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUsername1">Montant</label>
+                <input type="text" class="form-control" name="montant" id="libelle" placeholder="Montant">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputUsername1">Durée</label>
+                <input type="text" class="form-control" name="duree" id="libelle" placeholder="Durée de l'abonnement">
             </div>
  
               <button type="submit" class="btn btn-primary mr-2">Submit</button>
