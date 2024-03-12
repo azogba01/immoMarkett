@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Bailleur;
+use App\Models\User;
+use DB;
 
 
 use Illuminate\Http\Request;
@@ -13,7 +15,8 @@ class BailleurController extends Controller
      */
     public function bailleur()
     {
-        $bailleurs = Bailleur::all();
+        $bailleurs = DB::table('users')->where('role', 'bailleur')->get();
+        // $bailleurs = User::role('bailleur')->get();
         return view('/admin.bailleurlist', compact('bailleurs'));
     }
 

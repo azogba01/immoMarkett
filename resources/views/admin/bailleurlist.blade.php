@@ -66,13 +66,13 @@
             @foreach ($bailleurs as $item)
     <tr>
       <th scope="row">{{$item->id}}</th>
-      <td>{{$item->nom}}</td>
+      <td>{{$item->name}}</td>
          
 
-      <td>{{$item->prenom}}</td>
+      <td>{{$item->email}}</td>
          
           
-      <td>{{$item->tel}}</td>
+      {{-- <td>{{$item->tel}}</td> --}}
      
           <td><a href="/edit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
         <td>    
