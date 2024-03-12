@@ -159,15 +159,15 @@
             <a class="nav-link " href="{{ url('/contact') }}">Contact</a>
           </li>
           @guest
-                            @if (Route::has('login'))
+                           {{-- @if (Route::has('login'))
                                 <li class="nav-item btn btn-success {{ request()->is('/login') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
-                            @endif
+                            @endif --}}
 
                             @if (Route::has('register'))
                                 <li class="nav-item btn btn-success {{ request()->is('/register') ? 'active' : '' }}">
-                                    <a class="nav-link " href="{{ route('register') }}">S'inscrire</a>
+                                    <a class="nav-link " href="{{ route('register') }}"> Publier ?</a>
                                 </li>
                             @endif
                         @else

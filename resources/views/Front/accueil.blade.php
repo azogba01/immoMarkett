@@ -203,15 +203,15 @@
                   <div class="card-overlay-a-content">
                     <div class="card-header-a">
                       <h2 class="card-title-a">
-                        <a href="property-single.html">206 Mount
+                        <a href="property-single.html">{{$item->etat}}
                           <br /> Olive Road Two</a>
                       </h2>
                     </div>
                     <div class="card-body-a">
                       <div class="price-box d-flex">
-                        <span class="price-a">rent | $ 12.000</span>
+                        <span class="price-a">rent | $ {{$item->prix}}</span>
                       </div>
-                      <a href="#" class="link-a">Click here to view
+                      <a href="#" class="link-a">{{$item->superficie}}
                         <span class="bi bi-chevron-right"></span>
                       </a>
                     </div>  
@@ -241,7 +241,7 @@
                 </div>
               </div>
             </div><!-- End carousel item -->
- 
+            @endforeach
           </div>
         </div>
         <div class="propery-carousel-pagination carousel-pagination"></div>
@@ -644,4 +644,4 @@
 
   </main><!-- End #main -->
    
-  @endsection 
+@endsection 

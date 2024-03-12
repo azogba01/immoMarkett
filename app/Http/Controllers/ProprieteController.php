@@ -30,17 +30,7 @@ class ProprieteController extends Controller
     public function store(Request $request)
     {
         //
-<<<<<<< HEAD
-        Propriete::create([
-            'etat'=> $request->input('etat'),
-            'prix'=> $request->input('prix'),
-            'superficie'=> $request->input('superficie'),
-            'condition'=> $request->input('condition'),
-            'image'=> $request->input('image'),
-        ]);
-        return redirect('/proprietecreate');
-=======
-        
+ 
         Propriete::create([
             'etat'=> $request->input('etat'),
             'prix'=> $request->input('prix'),
@@ -48,7 +38,17 @@ class ProprieteController extends Controller
             'condition'=> $request->input('condition'),
             'status'=> $request->status=1,
         ]);
-        return redirect('/proprietecreate');
+        return redirect('/admin.proprietecreate');
+    }
+        
+        // Propriete::create([
+        //     'etat'=> $request->input('etat'),
+        //     'prix'=> $request->input('prix'),
+        //     'superficie'=> $request->input('superficie'),
+        //     'condition'=> $request->input('condition'),
+        //     'status'=> $request->status=1,
+        // ]);
+        // return redirect('/proprietecreate');
         // $this->validate($request, [
         // 'nom'=>'required|unique:proprietes',
         // 'prix'=>'required',
@@ -71,21 +71,21 @@ class ProprieteController extends Controller
         // }
         // else{
             
-            $fileNametostore='noimage.jpg';
-        }
-        $propriete =new Propriete();
-        $propriete ->user_id = auth()->id();
-        $propriete ->nom=$request->input('nom');
-        $propriete ->prix=$request->input('prix');
-        $propriete ->superficie=$request->input('superficie');
-        $propriete ->condition=$request->input('condition'); 
-        $propriete ->propriete_image=$fileNametostore;
-        $propriete ->status=1;
-        $propriete ->save();
-        return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
+        //     $fileNametostore='noimage.jpg';
+        // }
+        // $propriete =new Propriete();
+        // $propriete ->user_id = auth()->id();
+        // $propriete ->nom=$request->input('nom');
+        // $propriete ->prix=$request->input('prix');
+        // $propriete ->superficie=$request->input('superficie');
+        // $propriete ->condition=$request->input('condition'); 
+        // $propriete ->propriete_image=$fileNametostore;
+        // $propriete ->status=1;
+        // $propriete ->save();
+        // return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
 
->>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
-    }
+// >>>>>>> 05361b7d2b4321636a4384364405e1afdd520153
+    
 
     /**
      * Display the specified resource.
@@ -93,7 +93,7 @@ class ProprieteController extends Controller
     public function show(string $id)
     {
         $propriete = Propriete::findOrFail($id);
-        return view('propriete.show', compact('propriete'));
+        return view('/admin.propriete.show', compact('propriete'));
     }
 
     /**
@@ -102,7 +102,7 @@ class ProprieteController extends Controller
     public function edit(string $id)
     {
         $propriete = Propriete::findOrFail($id);
-        return view('proprieteedite', compact('propriete'));
+        return view('admin.proprieteedite', compact('propriete'));
 
     }
 
@@ -116,10 +116,10 @@ class ProprieteController extends Controller
             'prix'=> $request->input('prix'),
             'superficie'=> $request->input('superficie'),
             'condition'=> $request->input('condition'),
-            'image'=> $request->input('image'),
+            'status'=> $request->status=1,
 
         ]);
-        return redirect('/proprietelist');
+        return redirect('/admin.proprietelist');
     }
 
     /**

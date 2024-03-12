@@ -13,7 +13,7 @@
          {{ session('success') }}
      </div>
  @endif
-     <form action="{{ route('propriete.store') }}" method="POST" enctype="multipart/form-data">
+     <form action="{{ url('/proprietecreate') }}" method="POST" enctype="multipart/form-data">
          @csrf
          <label for="etat">Etat :</label>
          <input type="text" name="etat" required> <br><br>
@@ -23,8 +23,8 @@
          <input type="integer" name="superficie" required> <br><br>
          <label for="condition">Condition :</label>
          <input type="text" name="condition" required> <br><br>
-         <label for="condition">Image :</label>
-         <input type="file" name="propriete_image" required> <br><br>
+         {{-- <label for="condition">Image :</label>
+         <input type="file" name="propriete_image" required> <br><br> --}}
            <button type="submit">Envoyer</button>
  
  

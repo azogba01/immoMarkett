@@ -163,6 +163,7 @@
                   </ul>
               </div>
             </li>
+            @can('bailleur')
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Proprietes</span>
@@ -170,11 +171,12 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="{{('/proprietecreate')}}">ajouter une propriete</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="{{('/proprietelist')}}">Liste des proprietes</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/proprietecreate')}}">ajouter une propriete</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/proprietelist')}}">Liste des proprietes</a></li>
                 </ul>
               </div>
             </li>
+            @endcan
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Bailleurs</span>
@@ -182,8 +184,8 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="{{('/bailleurcreate')}}">ajouter une bailleur</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="{{('/bailleurliste')}}">Liste des bailleurs</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/bailleurcreate')}}">ajouter une bailleur</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/bailleurliste')}}">Liste des bailleurs</a></li>
                 
                   {{-- <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/buttons.html">ajouter une bailleur</a></li> --}}
                   {{-- <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/typography.html">Liste des bailleurs</a></li> --}}
