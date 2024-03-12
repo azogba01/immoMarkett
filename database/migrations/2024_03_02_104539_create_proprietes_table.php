@@ -26,9 +26,7 @@ return new class extends Migration
                                                ->on('categories')
                                                ->onDelete('cascade');
 
-            $table->timestamps();
-
-
+           
             // $table->string('image');
 
             $table->integer('status');

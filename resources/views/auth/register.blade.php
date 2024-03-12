@@ -53,10 +53,15 @@ input[type="submit"]:hover {
     
    
 <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Vous devez vous s\'incrire et faire un abonnement dabord avant de publier un article') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -140,6 +145,11 @@ input[type="submit"]:hover {
         </div>
     </div>
 </div>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
 @endsection
 
  
