@@ -150,18 +150,7 @@
                 <i class="icon-screen-desktop menu-icon"></i>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Proprietes</span>
-                <i class="icon-layers menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="{{url('/proprietecreate')}}">ajouter une propriete</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="{{url('/proprietelist')}}">Liste des proprietes</a></li>
-                </ul>
-              </div>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Categories de propriete</span>
@@ -174,9 +163,21 @@
                   </ul>
               </div>
             </li>
-            @can('bailleur')
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Proprietes</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/proprietecreate')}}">ajouter une propriete</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/proprietelist')}}">Liste des proprietes</a></li>
+                </ul>
+              </div>
+            </li>
+            {{-- @can('bailleur')
             
-           @endcan
+           @endcan --}}
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Bailleurs</span>
