@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HomeController ;
@@ -37,9 +36,8 @@ Route::get('/categoryedit/{id}/',[CategorieController::class,'edit']);
 Route::put('/categoryedit/{id}/',[CategorieController::class, 'update'])->name('categories.update') ;
 Route::get('/categorielist',[CategorieController::class, 'categorie']);
 Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');
-Route::delete('/categoriedelete/{id}/',[CategorieController::class, 'destroy'])->name('categories.delete') ;
+Route::delete('/deletecategories/{id}/',[CategorieController::class, 'destroy'])->name('categories.delete') ;
 Route::delete('/categorieshow/{id}/',[CategorieController::class, 'show'])->name('categories.show') ;
-
 
 Route::get('/proprietecreate',[ProprieteController::class, 'create'])->name('propriete.create');
 Route::post('/proprietecreate',[ProprieteController::class, 'store'])->name('propriete.store');
@@ -47,7 +45,8 @@ Route::get('/proprietelist',[ProprieteController::class, 'propriete']);
 Route::get('/proprietedit/{id}',[ProprieteController::class, 'edit']);
 Route::put('/proprietedit/{id}/',[ProprieteController::class, 'update'])->name('propriete.update') ;
 Route::delete('/proprietedelete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
-
+Route::get('/searchpropriete',[ProprieteController::class, 'searchpropriete'])->name('propriete.search');
+ Route::post('/searchpropriete',[ProprieteController::class, 'searchpropriete']);
 
 Route::get('/typebailleurcreate',[TypebailleurController::class, 'create'])->name('typebailleurs.create');
 Route::post('/typebailleurcreate',[TypebailleurController::class, 'store'])->name('typebailleurs.store');
@@ -55,7 +54,6 @@ Route::get('/typebailleurlist',[TypebailleurController::class, 'typebailleur']);
 Route::get('/typebailleurdit/{id}/',[TypebailleurController::class, 'edit']);
 Route::put('/typebailleurdit/{id}/',[TypebailleurController::class, 'update'])->name('typebailleurs.update') ;
 Route::delete('/typebailleurdelete/{id}/',[TypebailleurController::class, 'destroy'])->name('typebailleurs.delete') ;
-
 
 Route::get('/bailleurcreate',[BailleurController::class, 'create']);
 Route::post('/bailleurcreate',[BailleurController::class, 'store'])->name('bailleur.store');

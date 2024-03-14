@@ -18,6 +18,7 @@ class CategorieController extends Controller
      * Display a listing of the resource.
      */
     
+    
      public function categorie(){
         $categorie=Categorie::latest()->get();
         return view('/admin.categorielist',compact('categorie'));

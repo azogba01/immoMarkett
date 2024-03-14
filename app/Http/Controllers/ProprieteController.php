@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Models\Propriete;
 use App\Models\Categorie;
 use Illuminate\Http\Request;
+use DB;
 class ProprieteController extends Controller
 {
     public function __construct()
@@ -27,6 +28,12 @@ class ProprieteController extends Controller
         $categorie = Categorie::all();
         return view('/admin.proprietecreate', compact('categorie'));
     }
+    public function proprietesearch()
+    {
+        $propriete = Propriete::all();
+        return view('/Front.search', compact('propriete'));
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -138,5 +145,17 @@ class ProprieteController extends Controller
         Propriete::destroy($id);
         return redirect('/proprietelist');
     }
+    
+    public function searchpropriete(Request $request){
+        $etat = $request->input('etat');
+        $prix = $request->input('prix');
+        $searchpropriete = DB::table('proprietes')
+                ->where('etat', 'LIKE', '%'.$etat.'%')
+                ->where('prix','LIKE', '%'.$prix.'%');
+                // ->where('domaine', 'LIKE', '%'.$domaine.'%')
+                // ->paginate(6);
+            return view('Front.search',compact('searchpropriete'));
+    }
+     
 }
 
