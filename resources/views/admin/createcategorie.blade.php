@@ -27,19 +27,7 @@
               @csrf
                 <div class="form-group">
               <label for="exampleFormControlSelect1">Catégorie</label>
-              <select class="form-control form-control-lg" name="libelle" id="exampleFormControlSelect1">
-                <option>Appartements</option>
-                <option>Bureaux</option>
-                <option>Magasins</option>
-                <option>Restaurants</option>
-                <option>Hôtels</option>
-                <option>Entrepôts</option>
-                <option>Terrains résidentiels</option>
-                <option>Terrains commerciaux </option>
-                <option>Terrains agricoles</option>
-                <option>Propriétés de luxe</option>
-                <option>Maisons individuelles</option>
-              </select>
+                <input type="text" class="form-control" name="libelle" id="libelle" placeholder="Libelle">
             </div>
  
               <button type="submit" class="btn btn-primary mr-2">Submit</button>

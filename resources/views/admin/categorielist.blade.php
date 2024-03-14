@@ -55,7 +55,6 @@
       <th scope="col">Nom</th>
       <th scope="col">Action</th>
       <th scope="col">Supression</th>
-      <th scope="col">Detail</th>
       <button type='submit' class="btn btn-success" ><a href="createcategorie">Ajouter</a></button>
    
             </tr>
@@ -65,16 +64,14 @@
     <tr>
       <th scope="row">{{$item->id}}</th>
       <td>{{$item->libelle}}</td>
-          <td><a href="/edit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
+          <td><a href="/categoryedit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
         <td>
-        <form action="/categories/{{$item->id}}" method="POST">
+        <form action="{{url('/categoriedelete/'.$item->id)}}" method="POST">
            @csrf
            @method('delete')
            <button class="btn btn-danger" type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')" >Supprimer</button> 
         </form>  
       </td>
-      <td><a href="/categories/{{$item->id}}"><button class="btn btn-success">Detail</button></a></td>
-
    @endforeach
           </tbody>
         </table>

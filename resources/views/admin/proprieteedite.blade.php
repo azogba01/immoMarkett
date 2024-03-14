@@ -6,7 +6,7 @@
 
    </section>
         <label for="etat">Etat :</label>
-        <input type="text" name="etat" value="{{$propriete->eta}}" required> <br> <br>
+        <input type="text" name="etat" value="{{$propriete->etat}}" required> <br> <br>
          <label for="prix">Prix :</label>
         <input type="text" name="prix" value="{{$propriete->prix}}" required> <br> <br>
          <label for="superficie">Superficie :</label>

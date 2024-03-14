@@ -25,10 +25,7 @@ return new class extends Migration
              $table->foreign('id_categorie')->references('id')
                                                ->on('categories')
                                                ->onDelete('cascade');
-
-            $table->timestamps();
-
-
+ 
             // $table->string('image');
 
             $table->integer('status');

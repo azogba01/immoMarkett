@@ -72,6 +72,9 @@ class typeabonnementController extends Controller
     public function destroy(string $id)
     {
        Typeabonnement::destroy($id);
-       return redirect('/admin.typeabonnementlist')->with('success', 'Suppression effectuer');
+        return back()->with("jkbhjbhjb");
+        $typeabonnement=Typeabonnement::latest()->get();
+
+    //    <!-- return redirect('/admin.typeabonnementlist')->with('success', 'Suppression effectuer'); -->
     }
 }

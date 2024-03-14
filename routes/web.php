@@ -34,11 +34,11 @@ Route::get('/dashboard',[FrontController::class, 'admin']);
 
 Route::get('/createcategorie',[CategorieController::class, 'create']);
 Route::get('/categoryedit/{id}/',[CategorieController::class,'edit']);
-Route::put('/categoryedit/{id}/',[CategorieController::class, 'update'])->name('categories.update') ;
-Route::get('/categorielist',[CategorieController::class, 'categorie']);
+Route::put('/categoryedit/{id}/',[CategorieController::class, 'update'])->name('categories.update');
+Route::get('/categorielist',[CategorieController::class, 'categorie'])->name('categorie.list');
 Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');
 Route::delete('/categoriedelete/{id}/',[CategorieController::class, 'destroy'])->name('categories.delete') ;
-Route::delete('/categorieshow/{id}/',[CategorieController::class, 'show'])->name('categories.show') ;
+Route::get('/categorieshow/{id}/',[CategorieController::class, 'show'])->name('categories.show');
 
 
 Route::get('/proprietecreate',[ProprieteController::class, 'create'])->name('propriete.create');
@@ -47,6 +47,7 @@ Route::get('/proprietelist',[ProprieteController::class, 'propriete']);
 Route::get('/proprietedit/{id}',[ProprieteController::class, 'edit']);
 Route::put('/proprietedit/{id}/',[ProprieteController::class, 'update'])->name('propriete.update') ;
 Route::delete('/proprietedelete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
+Route::get('/proprieteshow/{id}/',[ProprieteController::class, 'show'])->name('proprietes.show');
 
 
 Route::get('/typebailleurcreate',[TypebailleurController::class, 'create'])->name('typebailleurs.create');
@@ -62,7 +63,7 @@ Route::post('/bailleurcreate',[BailleurController::class, 'store'])->name('baill
 Route::get('/bailleurlist',[BailleurController::class, 'bailleur']);
 Route::get('/bailleuredit/{id}/',[BailleurController::class, 'edit']);
 Route::put('/bailleuredit/{id}/',[BailleurController::class, 'update'])->name('bailleurs.update') ;
-Route::delete('/bailleurdelete/{id}/',[BailleurController::class, 'destroy'])->name('bailleurs.delete') ;
+Route::get('/bailleurdelete/{id}/',[BailleurController::class, 'destroy'])->name('bailleurs.delete') ;
 Route::delete('/bailleurshow/{id}/',[BailleurController::class, 'show'])->name('bailleurs.delete') ;
 
 
@@ -72,7 +73,7 @@ Route::post('/villecreate',[VilleController::class, 'store'])->name('villes.stor
 Route::get('/ villelist',[VilleController::class, 'ville']);
 Route::get('/villedit/{id}/',[VilleController::class, 'edit']);
 Route::put('/villedit/{id}/',[VilleController::class, 'update'])->name('villes.update') ;
-Route::delete('/villedelete/{id}/',[VilleController::class, 'destroy'])->name('villes.delete') ;
+Route::get('/villedelete/{id}/',[VilleController::class, 'destroy'])->name('villes.delete') ;
 Route::delete('/villeshow/{id}/',[VilleController::class, 'show'])->name('villes.delete') ;
 
 Route::get('/typeabonnementcreate',[TypeabonnementController::class, 'create'])->name('typeabonnements.create');
@@ -80,7 +81,7 @@ Route::post('/typeabonnementcreate',[TypeabonnementController::class, 'store'])-
 Route::get('/ typeabonnementlist',[TypeabonnementController::class, 'typeabonnement']);
 Route::get('/typeabonnementdit/{id}/',[TypeabonnementController::class, 'edit']);
 Route::put('/typeabonnementdit/{id}/',[TypeabonnementController::class, 'update'])->name('typeabonnements.update') ;
-Route::delete('/typeabonnementdelete/{id}/',[TypeabonnementController::class, 'destroy'])->name('typeabonnements.delete') ;
+Route::get('/typeabonnementdelete/{id}/',[TypeabonnementController::class, 'destroy'])->name('typeabonnements.delete') ;
 Route::delete('/typeabonnementshow/{id}/',[TypeabonnementController::class, 'show'])->name('typeabonnements.delete') ;
  
 Auth::routes();

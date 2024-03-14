@@ -39,7 +39,8 @@ class CategorieController extends Controller
         Categorie::create([
         'libelle'=>$request->input('libelle'),
        ]);
-       return redirect('/admin.categorielist')->with('success', 'Categorie ajouté(e) avec succes');
+        return redirect()->route('categorie.list')->with('info','DEFRGT');
+    //    return redirect('/admin.categorielist')->with('success', 'Categorie ajouté(e) avec succes');
     }
  
     /**
@@ -73,6 +74,10 @@ class CategorieController extends Controller
     public function destroy(string $id)
     {
        Categorie::destroy($id);
-       return redirect('/admin.categorielist')->with('success', 'Suppression effectuer');
+        $categorie=Categorie::latest()->get();
+
+    //    return view('admin.categorielist')->with('success', 'Suppression effectuer');
+        return back()->with("jkbhjbhjb");
+
     }
 }
