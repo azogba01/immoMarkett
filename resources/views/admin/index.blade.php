@@ -78,7 +78,7 @@
             </div> --}}
           </div>
           <!-- Quick Action Toolbar Starts-->
-          <div class="row quick-action-toolbar">
+          {{-- <div class="row quick-action-toolbar">
             <div class="col-md-12 grid-margin">
               <div class="card">
                 <div class="card-header d-block d-md-flex">
@@ -101,7 +101,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
           <!-- Quick Action Toolbar Ends-->
           {{-- <div class="row">
             <div class="col-md-12 grid-margin">

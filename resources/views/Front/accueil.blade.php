@@ -5,7 +5,7 @@
 
     <div class="swiper-wrapper">
 
-      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(assets/img/slide-1.jpg)">
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(assets/img/imo.jpg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -15,15 +15,14 @@
                   <div class="intro-body">
                     <h1 class="intro-title mb-4 ">
                       <span class="color-b">Marché </span> Immobilier
-                      <br> Olive Road Two
+                      <br> Pour tous
                     </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
+                    
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -52,7 +51,7 @@
           </div>
         </div>
       </div> --}}
-      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(assets/img/slide-3.jpg)">
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(assets/img/imo2.jpg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -60,16 +59,9 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345
-                    </p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Alira
-                      <br> Roan Road One
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
+                    {{-- <p class="intro-subtitle intro-price">
+                      <a href="#"><span class="price-a"></span></a>
+                    </p> --}}
                   </div>
                 </div>
               </div>
@@ -192,7 +184,6 @@
 
         <div id="property-carousel" class="swiper">
           <div class="swiper-wrapper">
-
             @foreach ($propriete as $item)
             <div class="carousel-item-b swiper-slide">
               <div class="card-box-a card-shadow">
@@ -209,7 +200,7 @@
                     </div>
                     <div class="card-body-a">
                       <div class="price-box d-flex">
-                        <span class="price-a">rent | $ {{$item->prix}}</span>
+                        <span class="price-a"> {{$item->prix}}</span>
                       </div>
                       <a href="#" class="link-a">{{$item->superficie}}
                         <span class="bi bi-chevron-right"></span>
@@ -220,17 +211,14 @@
                         <li>
                           <h4 class="card-info-title">Area</h4>
                           <span>{{$item->superficie}}
-                            <sup>2</sup>
+                            <sup></sup>
                           </span>
                         </li>
                         <li>
                           <h4 class="card-info-title">{{$item->condition}}</h4>
                           <span>2</span>
                         </li>
-                        <li>
-                          <h4 class="card-info-title">Baths</h4>
-                          <span>4</span>
-                        </li>
+                       
                         <li>
                           <h4 class="card-info-title">Garages</h4>
                           <span>1</span>

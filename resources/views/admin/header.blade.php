@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>immomaket Admin</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="/admin/vendors/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="/admin/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="/admin/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="{{asset('/admin/vendors/simple-line-icons/css/simple-line-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('/admin/vendors/flag-icon-css/css/flag-icon.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/admin/vendors/css/vendor.bundle.base.css')}}">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="./admin/vendors/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="./admin/vendors/chartist/chartist.min.css">
+    <link rel="stylesheet" href="{{asset('./admin/vendors/daterangepicker/daterangepicker.css')}}">
+    <link rel="stylesheet" href="{{('./admin/vendors/chartist/chartist.min.css')}}">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
-    <link rel="stylesheet" href="./admin/css/style.css">
+    <link rel="stylesheet" href="{{asset('./admin/css/style.css')}}"/>
     <!-- End layout styles -->
-    <link rel="shortcut icon" href=".admin/images/favicon.png" />
+    <link rel="shortcut icon" href="{{asset('./admin/images/favicon.png')}}"/>
   </head>
   <body>
-    <div class="container-scroller">
+    <div class= "container-scroller">
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="navbar-brand-wrapper d-flex align-items-center">

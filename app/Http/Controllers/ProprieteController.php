@@ -143,8 +143,24 @@ class ProprieteController extends Controller
     public function destroy(string $id)
     {
         Propriete::destroy($id);
-        return redirect('/proprietelist');
+        // return view('admin.proprietelist');
+         $propriete = Propriete::all();
+         return back()->with("jkbhjbhjb");
+
     }
+
+    public function searchpropriete(Request $request){
+            $type = $request->input('etat');
+            $ville = $request->input('prix');
+            // $domaine = $request->input('domaine');
+
+            $searchecole = DB::table('proprietes')
+                    ->where('etat', 'LIKE', '%'.$etat.'%')
+                    ->where('prix','LIKE', '%'.$prix.'%')
+                    // ->paginate(6);
+            return view('frontend.search',compact('searchpropriete'));
+     }
+
     
     public function searchpropriete(Request $request){
         $query = $request->input('query');
@@ -154,5 +170,8 @@ class ProprieteController extends Controller
             return view('Front.search',compact('searchpropriete'));
     }
      
+
 }
+
+
 

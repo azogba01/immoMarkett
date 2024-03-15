@@ -37,14 +37,14 @@
     </div>
     <span class="close-box-collapse right-boxed bi bi-x"></span>
     <div class="box-collapse-wrap form">
-      <form action="{{ url('/searchpropriete')}}" method="GET" role="search">
-            @csrf
+      <form class="form-a">
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
+ 
               <label class="pb-2" for="Type">prix</label>
               <input type="text" class="form-control form-control-lg form-control-a" value="{{Request::get('searchpropriete')}}" name="query" placeholder="Keyword">
-            </div>
+          </div>
           </div>
           {{-- <div class="col-md-12 mb-2">
             <div class="form-group">
@@ -54,19 +54,20 @@
           </div> --}}
           <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
+ 
               <label class="pb-2" for="Type">categorie</label>
               <select class="form-control form-select form-control-a"  value="{{Request::get('searchpropriete')}}" name="query" placeholder="Keyword" id="Type">
                 <option selected>Tout type</option>
                 <option value="louer">A LOUER</option>
                 <option value="vendre">A VENDRE</option>
 
-              </select>
+    </select>
             </div>
           </div>
           {{-- <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
               <label class="pb-2" for="city">City</label>
-              <select class="form-control form-select form-control-a" id="city">
+              <select class="form-control form-select form-control-a" id="city" value="{{Request::get('search')}}" name="domaine" >
                 <option>All City</option>
                 <option>Alabama</option>
                 <option>Arizona</option>

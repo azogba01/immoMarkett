@@ -6,10 +6,8 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     margin-left: 550px;
-    margin-top: 130px;
-    
+    margin-top: 130px;   
 }
-
 h2 {
     text-align: center;
     
@@ -61,7 +59,7 @@ input[type="submit"]:hover {
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Vous devez vous s\'incrire et faire un abonnement dabord avant de publier un article') }}</div>
+                <div class="card-header">{{ __('Vous devez vous s\'incrire avant de publier un article') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -74,10 +72,10 @@ input[type="submit"]:hover {
                              </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="type" class="col-md-4 col-form-label text-md-end">{{ __('type abonement') }}</label>
+                            {{-- <label for="hidden" class="col-md-4 col-form-label text-md-end">{{ __('type abonnement') }}</label> --}}
 
                             <div class="col-md-6">
-                                <input id="type" type="text" class="form-control @error('type') is-invalid @enderror" name="type"   required autocomplete="type" autofocus>
+                                <input id="type" type="hidden" class="form-control @error('type') is-invalid @enderror" name="type"   value="{{'bailleur'}}"  required autocomplete="type" autofocus>
  
                             </div>
                         </div>

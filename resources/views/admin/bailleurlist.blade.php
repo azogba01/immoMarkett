@@ -53,8 +53,7 @@
             <tr>
        <th scope="col">Num</th>
       <th scope="col">Nom</th>
-      <th scope="col">Prénom</th>
-      <th scope="col">Téléphone</th>  
+      <th scope="col">Prénom</th> 
       <th scope="col">Modifier</th>
       <th scope="col">Supression</th>
       <th scope="col">Detail</th>
