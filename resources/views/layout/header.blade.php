@@ -43,20 +43,15 @@
             <div class="form-group">
  
               <label class="pb-2" for="Type">prix</label>
-              <input type="text" class="form-control form-control-lg form-control-a" value="{{Request::get('searchpropriete')}}" name="query" placeholder="Keyword">
+              <input type="text" class="form-control form-control-lg form-control-a"  name="query" placeholder="Keyword">
           </div>
           </div>
-          {{-- <div class="col-md-12 mb-2">
-            <div class="form-group">
-              <label class="pb-2" for="Type">etat</label>
-              <input type="text" class="form-control form-control-lg form-control-a" value="{{Request::get('search')}}" name="prix" placeholder="Keyword">
-            </div>
-          </div> --}}
+           
           <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
  
               <label class="pb-2" for="Type">categorie</label>
-              <select class="form-control form-select form-control-a"  value="{{Request::get('searchpropriete')}}" name="query" placeholder="Keyword" id="Type">
+              <select class="form-control form-select form-control-a"   name="query" placeholder="Keyword" id="Type">
                 <option selected>Tout type</option>
                 <option value="louer">A LOUER</option>
                 <option value="vendre">A VENDRE</option>
@@ -64,64 +59,7 @@
     </select>
             </div>
           </div>
-          {{-- <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="city">City</label>
-              <select class="form-control form-select form-control-a" id="city" value="{{Request::get('search')}}" name="domaine" >
-                <option>All City</option>
-                <option>Alabama</option>
-                <option>Arizona</option>
-                <option>California</option>
-                <option>Colorado</option>
-              </select>
-            </div>
-          </div> --}}
-          {{-- <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="bedrooms">Bedrooms</label>
-              <select class="form-control form-select form-control-a" id="bedrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div> --}}
-          {{-- <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="garages">Garages</label>
-              <select class="form-control form-select form-control-a" id="garages">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="bathrooms">Bathrooms</label>
-              <select class="form-control form-select form-control-a" id="bathrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div> --}}
-          {{-- <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="price">Min Price</label>
-              <select class="form-control form-select form-control-a" id="price">
-                <option>Unlimite</option>
-                <option>$50,000</option>
-                <option>$100,000</option>
-                <option>$150,000</option>
-                <option>$200,000</option>
-              </select>
-            </div>
-          </div> --}}
+          
           <div class="col-md-12">
             <button type="submit" class="btn btn-b">Search Property</button>
           </div>
