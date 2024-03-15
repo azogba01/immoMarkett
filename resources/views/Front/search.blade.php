@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('contenupage')
- <!--   Intro Section   -->
+ <!--   Intro Section   k-->
   <div class="intro intro-carousel swiper position-relative">
 
     <div class="swiper-wrapper">
@@ -189,11 +189,9 @@
             </div>
           </div>
         </div>
-
         <div id="property-carousel" class="swiper">
           <div class="swiper-wrapper">
-
-            @forelse ($propriete  as $item)
+            @forelse ($propriete as $item)
             <div class="carousel-item-b swiper-slide">
               <div class="card-box-a card-shadow">
                 <div class="img-box-a">
@@ -241,18 +239,14 @@
                 </div>
               </div>
             </div><!-- End carousel item -->
-             
             @empty
             <p class=" align-items-center " style="color: red;">Pas de resultats !!!!</p>
-
             @endforelse
           </div>
         </div>
         <div class="propery-carousel-pagination carousel-pagination"></div>
-
       </div>
     </section><!-- End Latest Properties Section -->
-
     <!--   Agents Section   -->
     {{-- <section class="section-agents section-t8">
       <div class="container">
