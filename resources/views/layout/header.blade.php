@@ -37,7 +37,7 @@
     </div>
     <span class="close-box-collapse right-boxed bi bi-x"></span>
     <div class="box-collapse-wrap form">
-      <form class="form-a">
+      <form action="{{ url('/searchpropriete') }}" method="GET">
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">

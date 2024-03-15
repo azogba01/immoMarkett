@@ -46,6 +46,8 @@ Route::get('/proprietelist',[ProprieteController::class, 'propriete']);
 Route::get('/proprietedit/{id}',[ProprieteController::class, 'edit']);
 Route::put('/proprietedit/{id}/',[ProprieteController::class, 'update'])->name('propriete.update') ;
 Route::delete('/proprietedelete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
+Route::get('/searchpropriete',[ProprieteController::class, 'searchpropriete'])->name('propriete.search');
+// Route::post('/searchpropriete',[ProprieteController::class, 'searchpropriete'])->name('propriete.create');
 
 
 Route::get('/typebailleurcreate',[TypebailleurController::class, 'create'])->name('typebailleurs.create');
