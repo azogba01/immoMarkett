@@ -143,7 +143,7 @@ class ProprieteController extends Controller
     public function destroy(string $id)
     {
         Propriete::destroy($id);
-        // return view('admin.proprietelist');
+        // return ffview('admin.proprietelist');
          $propriete = Propriete::all();
          return back()->with("jkbhjbhjb");
 
