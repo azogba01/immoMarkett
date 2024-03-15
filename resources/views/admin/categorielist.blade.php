@@ -66,7 +66,7 @@
       <td>{{$item->libelle}}</td>
           <td><a href="/categoryedit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
         <td>
-        <form action="{{url('/categoriedelete/'.$item->id)}}" method="POST">
+        <form action="/categories/{{$item->id}}" method="POST">
            @csrf
            @method('delete')
            <button class="btn btn-danger" type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')" >Supprimer</button> 

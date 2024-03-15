@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HomeController ;
@@ -38,7 +37,7 @@ Route::put('/categoryedit/{id}/',[CategorieController::class, 'update'])->name('
 Route::get('/categorielist',[CategorieController::class, 'categorie'])->name('categorie.list');
 Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');
 Route::delete('/categoriedelete/{id}/',[CategorieController::class, 'destroy'])->name('categories.delete') ;
-Route::get('/categorieshow/{id}/',[CategorieController::class, 'show'])->name('categories.show');
+Route::delete('/categorieshow/{id}/',[CategorieController::class, 'show'])->name('categories.show') ;
 
 
 Route::get('/proprietecreate',[ProprieteController::class, 'create'])->name('propriete.create');
@@ -47,7 +46,6 @@ Route::get('/proprietelist',[ProprieteController::class, 'propriete']);
 Route::get('/proprietedit/{id}',[ProprieteController::class, 'edit']);
 Route::put('/proprietedit/{id}/',[ProprieteController::class, 'update'])->name('propriete.update') ;
 Route::delete('/proprietedelete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
-Route::get('/proprieteshow/{id}/',[ProprieteController::class, 'show'])->name('proprietes.show');
 
 
 Route::get('/typebailleurcreate',[TypebailleurController::class, 'create'])->name('typebailleurs.create');
@@ -56,7 +54,6 @@ Route::get('/typebailleurlist',[TypebailleurController::class, 'typebailleur']);
 Route::get('/typebailleurdit/{id}/',[TypebailleurController::class, 'edit']);
 Route::put('/typebailleurdit/{id}/',[TypebailleurController::class, 'update'])->name('typebailleurs.update') ;
 Route::delete('/typebailleurdelete/{id}/',[TypebailleurController::class, 'destroy'])->name('typebailleurs.delete') ;
-
 
 Route::get('/bailleurcreate',[BailleurController::class, 'create']);
 Route::post('/bailleurcreate',[BailleurController::class, 'store'])->name('bailleur.store');

@@ -37,19 +37,24 @@
     </div>
     <span class="close-box-collapse right-boxed bi bi-x"></span>
     <div class="box-collapse-wrap form">
-      <form action="{{ url('/search')}}" method="GET" role="search">
-@csrf
+      <form class="form-a">
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
               <label class="pb-2" for="Type">Keyword</label>
-              <input type="text" class="form-control form-control-lg form-control-a" value="{{Request::get('search')}}" name="etat"  placeholder="Keyword">
+              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
             </div>
           </div>
+          {{-- <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">etat</label>
+              <input type="text" class="form-control form-control-lg form-control-a" value="{{Request::get('search')}}" name="prix" placeholder="Keyword">
+            </div>
+          </div> --}}
           <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
               <label class="pb-2" for="Type">Type</label>
-              <select class="form-control form-select form-control-a" id="Type" value="{{Request::get('search')}}" name="prix" >
+              <select class="form-control form-select form-control-a" id="Type">
                 <option>All Type</option>
                 <option>For Rent</option>
                 <option>For Sale</option>
@@ -57,7 +62,7 @@
               </select>
             </div>
           </div>
-          <div class="col-md-6 mb-2">
+          {{-- <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
               <label class="pb-2" for="city">City</label>
               <select class="form-control form-select form-control-a" id="city" value="{{Request::get('search')}}" name="domaine" >
@@ -68,8 +73,8 @@
                 <option>Colorado</option>
               </select>
             </div>
-          </div>
-          <div class="col-md-6 mb-2">
+          </div> --}}
+          {{-- <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
               <label class="pb-2" for="bedrooms">Bedrooms</label>
               <select class="form-control form-select form-control-a" id="bedrooms">
@@ -79,8 +84,8 @@
                 <option>03</option>
               </select>
             </div>
-          </div>
-          <div class="col-md-6 mb-2">
+          </div> --}}
+          {{-- <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
               <label class="pb-2" for="garages">Garages</label>
               <select class="form-control form-select form-control-a" id="garages">
@@ -102,8 +107,8 @@
                 <option>03</option>
               </select>
             </div>
-          </div>
-          <div class="col-md-6 mb-2">
+          </div> --}}
+          {{-- <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
               <label class="pb-2" for="price">Min Price</label>
               <select class="form-control form-select form-control-a" id="price">
@@ -114,7 +119,7 @@
                 <option>$200,000</option>
               </select>
             </div>
-          </div>
+          </div> --}}
           <div class="col-md-12">
             <button type="submit" class="btn btn-b">Search Property</button>
           </div>
