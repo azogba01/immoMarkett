@@ -43,7 +43,7 @@
           <div class="col-md-12 mb-2">
             <div class="form-group">
               <label class="pb-2" for="Type">prix</label>
-              <input type="text" class="form-control form-control-lg form-control-a" value="{{Request::get('searchpropriete')}}" name="prix" placeholder="Keyword">
+              <input type="text" class="form-control form-control-lg form-control-a" value="{{Request::get('searchpropriete')}}" name="query" placeholder="Keyword">
             </div>
           </div>
           {{-- <div class="col-md-12 mb-2">
@@ -55,7 +55,7 @@
           <div class="col-md-6 mb-2">
             <div class="form-group mt-3">
               <label class="pb-2" for="Type">categorie</label>
-              <select class="form-control form-select form-control-a"  value="{{Request::get('searchpropriete')}}" name="etat" placeholder="Keyword" id="Type">
+              <select class="form-control form-select form-control-a"  value="{{Request::get('searchpropriete')}}" name="query" placeholder="Keyword" id="Type">
                 <option selected>Tout type</option>
                 <option value="louer">A LOUER</option>
                 <option value="vendre">A VENDRE</option>

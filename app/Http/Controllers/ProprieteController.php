@@ -30,8 +30,8 @@ class ProprieteController extends Controller
     }
     public function proprietesearch()
     {
-        $propriete = Propriete::all();
-        return view('/Front.search', compact('propriete'));
+        // $propriete = Propriete::all();
+        return view('/Front.search');
     }
 
 
@@ -147,13 +147,10 @@ class ProprieteController extends Controller
     }
     
     public function searchpropriete(Request $request){
-        $etat = $request->input('etat');
-        $prix = $request->input('prix');
-        $searchpropriete = DB::table('proprietes')
-                ->where('etat', 'LIKE', '%'.$etat.'%')
-                ->where('prix','LIKE', '%'.$prix.'%');
-                // ->where('domaine', 'LIKE', '%'.$domaine.'%')
-                // ->paginate(6);
+        $query = $request->input('query');
+
+        $searchpropriete = Propriete::orWhere('etat', 'LIKE', "%$query%")
+                            ->orWhere('prix', 'LIKE', "%$query%") ->get();
             return view('Front.search',compact('searchpropriete'));
     }
      
