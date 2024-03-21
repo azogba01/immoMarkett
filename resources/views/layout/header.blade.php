@@ -113,7 +113,7 @@
 
                             @if (Route::has('register'))
                                 <li class="nav-item btn btn-success {{ request()->is('/register') ? 'active' : '' }}">
-                                    <a class="nav-link " href="{{ route('register') }}"> Publier ?</a>
+                                    {{-- <a class="nav-link " href="{{ route('register') }}"> Publier ?</a> --}}
                                 </li>
                             @endif
                         @else

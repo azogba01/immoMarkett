@@ -78,8 +78,8 @@ Route::delete('/villeshow/{id}/',[VilleController::class, 'show'])->name('villes
 Route::get('/typeabonnementcreate',[TypeabonnementController::class, 'create'])->name('typeabonnements.create');
 Route::post('/typeabonnementcreate',[TypeabonnementController::class, 'store'])->name('typeabonnements.store');
 Route::get('/ typeabonnementlist',[TypeabonnementController::class, 'typeabonnement']);
-Route::get('/typeabonnementdit/{id}/',[TypeabonnementController::class, 'edit']);
-Route::put('/typeabonnementdit/{id}/',[TypeabonnementController::class, 'update'])->name('typeabonnements.update') ;
+Route::get('/typeabonnementedit/{id}/',[TypeabonnementController::class, 'edit']);
+Route::put('/typeabonnementedit/{id}/',[TypeabonnementController::class, 'update'])->name('typeabonnements.update') ;
 Route::get('/typeabonnementdelete/{id}/',[TypeabonnementController::class, 'destroy'])->name('typeabonnements.delete') ;
 Route::delete('/typeabonnementshow/{id}/',[TypeabonnementController::class, 'show'])->name('typeabonnements.delete') ;
  

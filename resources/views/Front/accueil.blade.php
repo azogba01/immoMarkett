@@ -75,6 +75,77 @@
 
   <main id="main">
 
+
+
+
+
+
+
+
+
+
+
+  <div class="header">
+    <h1>Découvrer nos offres d'abonnement</h1>
+    <h1>Abonne toi et vends plus vite</h1>
+
+    <h6><p> "Maximisez la visibilité de vos biens dès aujourd'hui ! 
+      Abonnez-vous pour publier vos annonces et toucher une audience qualifiée en quête de vos offres exceptionnelles. 
+      Ne manquez pas l'opportunité de faire briller vos biens sur notre plateforme de renom."</p></h6>
+  </div>
+  <div class="row1-container">
+    <div class="box box-down cyan">
+      <h2>Mensuel Flex</h2>
+      <p>Découvrez notre abonnement mensuel et donnez un coup de pouce à votre visibilité immobilière !</p>
+      <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+      <h5>Durée : 1 mois</h5>
+      <button type='submit' class="btn btn-success" ><a href="/register">S'abonner</a></button>
+    </div>
+
+    <div class="box red">
+      <h2>Triple Avantage</h2>
+      <p>Profitez de 3 mois complet pour publier et promouvoir vos biens, 
+        touchant ainsi une large audience d'acheteurs potentiels.</p>
+      <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+      <h5>Durée : 3 mois</h5>
+      <button type='submit' class="btn btn-success" ><a href="/register">S'abonner</a></button>  
+    </div>
+
+    <div class="box box-down blue">
+      <h2>Expérience Épique</h2>
+      <p>Avec une durée prolongée, vous bénéficiez d'une visibilité continue pour vos biens, 
+        attirant ainsi un flux constant d'acheteurs intéressés.</p>
+      <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+      <h5>Durée : 6 mois</h5>
+      <button type='submit' class="btn btn-success" ><a href="/register">S'abonner</a></button>
+    </div>
+  </div>
+  <div class="row2-container">
+    <div class="box orange">
+      <h2>Annuel Élite</h2>
+      <p>Maximisez votre visibilité immobilière sur une année entière. 
+        Ne manquez pas cette opportunité pour 
+        transformer votre portefeuille immobilier en succès durable !</p>
+      <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+      <h5>Durée : 1 an</h5>
+      <button type='submit' class="btn btn-success" ><a href="/register">S'abonner</a></button>
+    </div>
+  </div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!--   Services Section   -->
     {{-- <section class="section-services section-t8">
       <div class="container">

@@ -32,7 +32,7 @@
           <a class="navbar-brand brand-logo-mini" href="index.html"><img src="admin/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
-          <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Salut {{ Auth::user()->name }} ! Bienvenue sur Immomaket</h5>
+          <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Salut {{ Auth::user()->name }} ! Bienvenue sur Immoton tableau de bord !!!</h5>
           <ul class="navbar-nav navbar-nav-right ml-auto">
             <form class="search-form d-none d-md-block" action="#">
               <i class="icon-magnifier"></i>
@@ -47,7 +47,7 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
                 <a class="dropdown-item py-3">
-                  <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
+                  <p class="mb-0 font-weight-medium float-left">Vous avez  des mail non lu</p>
                   <span class="badge badge-pill badge-primary float-right">View all</span>
                 </a>
                 <div class="dropdown-divider"></div>
@@ -55,30 +55,7 @@
                   <div class="preview-thumbnail">
                     <img src="admin/images/faces/face10.jpg" alt="image" class="img-sm profile-pic">
                   </div>
-                  <div class="preview-item-content flex-grow py-2">
-                    <p class="preview-subject ellipsis font-weight-medium text-dark">Marian Garner </p>
-                    <p class="font-weight-light small-text"> The meeting is cancelled </p>
-                  </div>
-                </a>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="admin/images/faces/face12.jpg" alt="image" class="img-sm profile-pic">
-                  </div>
-                  <div class="preview-item-content flex-grow py-2">
-                    <p class="preview-subject ellipsis font-weight-medium text-dark">David Grey </p>
-                    <p class="font-weight-light small-text"> The meeting is cancelled </p>
-                  </div>
-                </a>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="admin/images/faces/face1.jpg" alt="image" class="img-sm profile-pic">
-                  </div>
-                  <div class="preview-item-content flex-grow py-2">
-                    <p class="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
-                    <p class="font-weight-light small-text"> The meeting is cancelled </p>
-                  </div>
-                </a>
-              </div>
+                   
             </li>
             <li class="nav-item dropdown language-dropdown d-none d-sm-flex align-items-center">
               <a class="nav-link d-flex align-items-center dropdown-toggle" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -201,18 +178,18 @@
                 </ul>
               </div>
             </li>
-             <li class="nav-item">
+             {{-- <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Type abonnement</span>
                 <i class="icon-layers menu-icon"></i>
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="{{url('/typeabonnementcreatelist')}}">Liste des bailleurs</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{url('/typeabonnementcreate')}}">Liste des bailleurs</a></li>
                   <li class="nav-item"> <a class="nav-link" href="{{url('/typeabonnementlist')}}">Liste des bailleurs</a></li>
                 </ul>
               </div>
-            </li>
+            </li> --}}
              <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Bailleurs</span>
