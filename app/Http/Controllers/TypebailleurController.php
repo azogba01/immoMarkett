@@ -7,6 +7,12 @@ use App\Http\Requests\UpdatetypebailleurRequest;
 
 class TypebailleurController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
      public function typebailleur(){
         $typebailleur=Typebailleur::latest()->get();
     
