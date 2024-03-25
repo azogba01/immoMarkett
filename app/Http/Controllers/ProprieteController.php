@@ -6,10 +6,15 @@ use Illuminate\Http\Request;
 use DB;
 class ProprieteController extends Controller
 {
+     
+
     public function __construct()
     {
         $this->middleware('auth');
     }
+    public function admin(){
+        return view('admin.index');
+       }
     /**
      * Display a listing of the resource.
      */
@@ -40,68 +45,13 @@ class ProprieteController extends Controller
      */
     public function store(Request $request)
     {
-        //
- 
-        Propriete::create([
-            'etat'=> $request->input('etat'),
-            'prix'=> $request->input('prix'),
-            'superficie'=> $request->input('superficie'),
-            'condition'=> $request->input('condition'),
-            'id_categorie'=> $request->input('id_categorie'),
-            'status'=> $request->status=1,
-        ]);
-        return redirect('/admin.proprietecreate');
+        $requestData = $request->all();
+        $fileName = time().$request->file('propriete_image')->getClientOriginalName();
+        $path = $request->file('propriete_image')->storeAs('images', $fileName, 'public');
+        $requestData["propriete_image"] = '/storage/'.$path;
+        Propriete::create($requestData);
+        return redirect('/admin.proprietelist')->with('flash_message', 'Propriete Addedd!');
     }
-        
-        // Propriete::create([
-        //     'etat'=> $request->input('etat'),
-        //     'prix'=> $request->input('prix'),
-        //     'superficie'=> $request->input('superficie'),
-        //     'condition'=> $request->input('condition'),
-        //     'status'=> $request->status=1,
-        // ]);
-        // return redirect('/proprietecreate');
-        // $this->validate($request, [
-        // 'nom'=>'required|unique:proprietes',
-        // 'prix'=>'required',
-        // 'superficie'=>'required',
-        // 'condition'=>'required',]);
-        // 'prpriete_image'=>'image|nullable|max:1999']);
-
-        // if($request->hasFile('propriete_image')){
-        //    //1-select image with extension
-        //    $fileNameWithExt=$request->file('propriete_image')->getClientOriginalName();
-        //    //2-get just file name
-        //    $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
-        //    //3-get just extension
-        //     $extension = $request->file('propriete_image')->getClientOriginalExtension();
-        //    //4-file name store
-        //    $fileNametostore=$fileName.'_'.time().'.'.$extension;
-        //    //uplaoder l'image
-        //    $path=$request->file('propriete_image')->move('propriete_images/propriete_images',
-        //               $fileNametostore);
-        // }
-        // else{
-            
-
-            // $fileNametostore='noimage.jpg';
-
-        //     $fileNametostore='noimage.jpg';
-
-        // }
-        // $propriete =new Propriete();
-        // $propriete ->user_id = auth()->id();
-        // $propriete ->nom=$request->input('nom');
-        // $propriete ->prix=$request->input('prix');
-        // $propriete ->superficie=$request->input('superficie');
-        // $propriete ->condition=$request->input('condition'); 
-        // $propriete ->propriete_image=$fileNametostore;
-        // $propriete ->status=1;
-        // $propriete ->save();
-        // return redirect('/proprietelist')->back()->with('status','le  propriete   ' .$propriete ->nom.'  a ete bien ajoute');
-
-    
-
     /**
      * Display the specified resource.
      */

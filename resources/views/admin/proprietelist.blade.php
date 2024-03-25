@@ -41,7 +41,8 @@
       <td>{{$item->prix}}</td>
       <td>{{$item->superficie}}</td>
       <td>{{$item->condition}}</td>
-      <td>{{$item->propriete_image}}</td>
+      <td><img src="{{asset($item->propriete_image)}}" alt="Propriete_image" ></td>
+      
 
           <td><a href="/edit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
         <td>

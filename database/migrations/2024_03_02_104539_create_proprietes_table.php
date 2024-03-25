@@ -22,14 +22,9 @@ return new class extends Migration
             $table->integer('superficie');
             $table->string('condition');
             $table->unsignedBigInteger('id_categorie');
-             $table->foreign('id_categorie')->references('id')
-                                               ->on('categories')
-                                               ->onDelete('cascade');
- 
-            // $table->string('image');
-
+            $table->foreign('id_categorie')->references('id') ->on('categories') ->onDelete('cascade');
             $table->integer('status');
-            // $table->string('propriete_image');
+            $table->string('propriete_image')->nullable();
             //  $table->foreign('proprietaire_id')
             //          ->references('id')
             //          ->on('proprietaires')

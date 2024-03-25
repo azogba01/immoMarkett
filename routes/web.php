@@ -28,8 +28,7 @@ Route::get('/blog-grid',[FrontController::class, 'blog_grid']);
 Route::get('/login',[FrontController::class, 'connection']);
 Route::get('/inscription',[FrontController::class, 'inscription']);
 Route::get('/about',[FrontController::class, 'about']);
-Route::get('/dashboard',[FrontController::class, 'admin']);
-// Route::get('/dashboard',[FrontController::class, 'admin']);
+ 
 
 Route::get('/createcategorie',[CategorieController::class, 'create']);
 Route::get('/categoryedit/{id}/',[CategorieController::class,'edit']);
@@ -40,6 +39,7 @@ Route::delete('/categoriedelete/{id}/',[CategorieController::class, 'destroy'])-
 Route::delete('/categorieshow/{id}/',[CategorieController::class, 'show'])->name('categories.show') ;
 
 
+Route::get('/dashboard',[ProprieteController::class, 'admin']);
 Route::get('/proprietecreate',[ProprieteController::class, 'create'])->name('propriete.create');
 Route::post('/proprietecreate',[ProprieteController::class, 'store'])->name('propriete.store');
 Route::get('/proprietelist',[ProprieteController::class, 'propriete']);
