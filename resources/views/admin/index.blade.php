@@ -205,8 +205,9 @@
                     <table class="table">
                       <thead>
                         <tr>
+                          <th class="font-weight-bold">Num </th>
                           <th class="font-weight-bold">Nom </th>
-                          <th class="font-weight-bold">Prénom</th>
+                          <th class="font-weight-bold">Role</th>
                           <th class="font-weight-bold">abonnement</th>
                           <th class="font-weight-bold">Prix</th>
                           <th class="font-weight-bold">Duree</th>
@@ -214,6 +215,25 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach ($usersWithSubscription  as $user)
+                <tr>
+                  <th scope="row">{{$user->id}}</th>
+                  <td>{{$user->name}}</td>
+                  <td>{{$user->role}}</td>
+                  <td>{{$user->abonn_type}}</td>
+                  <td>{{$user->prix}}</td>
+                  <td>{{$user->duree}}</td>
+                  <td>{{$user->temps}}</td>
+                      <td><a href="/categoryedit/{{$user->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
+                    <td>
+                    <form action="/categories/{{$user->id}}" method="POST">
+                       @csrf
+                       @method('delete')
+                       <button class="btn btn-danger" type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')" >Supprimer</button> 
+                    </form>  
+                  </td>
+               @endforeach
+                      </tbody>
                         
                     </table>
                   </div>

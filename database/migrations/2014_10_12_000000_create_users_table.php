@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('type');
             $table->integer('status');
             $table->string('role')->nullable();
+            $table->string('abonn_type')->default('2mois');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
