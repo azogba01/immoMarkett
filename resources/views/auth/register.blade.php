@@ -65,7 +65,10 @@ input[type="submit"]:hover {
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="row mb-3">
-                        
+                            <div class="form-group">
+                                {{-- <label for="exampleInputUsername1">status</label> --}}
+                                <input type="hidden" class="form-control" name="status"  value="1"  id="status" placeholder="status">
+                              </div>
                             <div class="col-md-6">
                                 <input id="role" type="hidden" class="form-control @error('role') is-invalid @enderror" name="role" value="{{'bailleur'}}"  required autocomplete="role" autofocus>
 
