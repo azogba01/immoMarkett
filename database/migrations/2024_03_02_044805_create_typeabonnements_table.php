@@ -16,9 +16,10 @@ return new class extends Migration
             $table->string('nom');
             $table->string('montant');
             $table->string('duree');
+            $table->Date('datefin');
             $table->timestamps();
         });
-    }
+    } 
 
     /**
      * Reverse the migrations.

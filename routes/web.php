@@ -8,6 +8,7 @@ use App\Http\Controllers\VilleController ;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\TypeabonnementController;
 use App\Http\Controllers\BailleurController;
+use App\Http\Controllers\PaiementController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,7 @@ Route::get('/blog-grid',[FrontController::class, 'blog_grid']);
 Route::get('/login',[FrontController::class, 'connection']);
 Route::get('/inscription',[FrontController::class, 'inscription']);
 Route::get('/about',[FrontController::class, 'about']);
+Route::get('/paiement',[PaiementController::class, 'paiement']);
  
 
 Route::get('/createcategorie',[CategorieController::class, 'create']);
@@ -42,9 +44,9 @@ Route::delete('/categorieshow/{id}/',[CategorieController::class, 'show'])->name
 Route::get('/dashboard',[ProprieteController::class, 'admin']);
 Route::get('/proprietecreate',[ProprieteController::class, 'create'])->name('propriete.create');
 Route::post('/proprietecreate',[ProprieteController::class, 'store'])->name('propriete.store');
-Route::get('/proprietelist',[ProprieteController::class, 'propriete']);
-Route::get('/proprietedit/{id}',[ProprieteController::class, 'edit']);
-Route::put('/proprietedit/{id}/',[ProprieteController::class, 'update'])->name('propriete.update') ;
+Route::get('/proprietelist',[ProprieteController::class, 'propriete'])->name('propriete.list') ;
+Route::get('/proprieteedit/{id}',[ProprieteController::class, 'edit'])->name('propriete.edite');
+Route::put('/proprietedit/{id}/',[ProprieteController::class, 'update'])->name('propriete.update');
 Route::delete('/proprietedelete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
 Route::get('/searchpropriete',[ProprieteController::class, 'searchpropriete'])->name('propriete.search');
 // Route::post('/searchpropriete',[ProprieteController::class, 'searchpropriete'])->name('propriete.create');

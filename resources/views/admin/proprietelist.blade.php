@@ -44,9 +44,9 @@
       <td><img src="{{asset($item->propriete_image)}}" alt="Propriete_image" ></td>
       
 
-          <td><a href="/edit/{{$item->id}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
+          <td><a href="{{route('propriete.edite',$item->id)}}"><button class="btn btn-success" onclick="return confirm('voulez vous modifier l\'element en question')">Modifier</button></a>
         <td>
-        <form action="/proprietes/{{$item->id}}" method="POST">
+        <form action="/proprietedelete/{{$item->id}}" method="POST">
            @csrf
            @method('delete')
            <button class="btn btn-danger" type="submit" onclick="return confirm('voulez vous supprimer l\'element en question')" >Supprimer</button> 

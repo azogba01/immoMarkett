@@ -15,4 +15,5 @@ class Propriete extends Model
     {
         return $this->belongsTo(Categorie::class);
     }
+    
 }

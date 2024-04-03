@@ -135,6 +135,7 @@ input[type="submit"]:hover {
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Inscrire') }}
                                 </button>
+            {{-- <a class="nav-link " href="{{ url('/login') }}">Se connecter</a> --}}
                             </div>
                         </div>
                     </form>

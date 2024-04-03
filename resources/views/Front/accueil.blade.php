@@ -99,7 +99,7 @@
       <p>Découvrez notre abonnement mensuel et donnez un coup de pouce à votre visibilité immobilière !</p>
       <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
       <h5>Durée : 1 mois</h5>
-      <button type='submit' class="btn btn-success" ><a href="/register">S'abonner</a></button>
+      <button type='submit' class="btn btn-success" ><a href="/login">S'abonner</a></button>
     </div>
 
     <div class="box red">
@@ -108,7 +108,7 @@
         touchant ainsi une large audience d'acheteurs potentiels.</p>
       <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
       <h5>Durée : 3 mois</h5>
-      <button type='submit' class="btn btn-success" ><a href="/register">S'abonner</a></button>  
+      <button type='submit' class="btn btn-success" ><a href="/login">S'abonner</a></button>  
     </div>
 
     <div class="box box-down blue">
@@ -117,7 +117,7 @@
         attirant ainsi un flux constant d'acheteurs intéressés.</p>
       <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
       <h5>Durée : 6 mois</h5>
-      <button type='submit' class="btn btn-success" ><a href="/register">S'abonner</a></button>
+      <button type='submit' class="btn btn-success" ><a href="/login">S'abonner</a></button>
     </div>
   </div>
   <div class="row2-container">
@@ -128,7 +128,7 @@
         transformer votre portefeuille immobilier en succès durable !</p>
       <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
       <h5>Durée : 1 an</h5>
-      <button type='submit' class="btn btn-success" ><a href="/register">S'abonner</a></button>
+      <button type='submit' class="btn btn-success" ><a href="/login">S'abonner</a></button>
     </div>
   </div>
  

@@ -11,4 +11,10 @@ class Typeproprietaire extends Model
     use HasFactory;
         protected $fillable=[
        'id','libelle'];
+
+        public function typeabonnement()
+    {
+        return $this->hasMany(Typeabonnement::class);
+    }
+   
 }

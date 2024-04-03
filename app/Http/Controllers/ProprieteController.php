@@ -13,6 +13,7 @@ class ProprieteController extends Controller
         $this->middleware('auth');
     }
     public function admin(){
+        
         return view('admin.index');
        }
     /**
@@ -50,7 +51,9 @@ class ProprieteController extends Controller
         $path = $request->file('propriete_image')->storeAs('images', $fileName, 'public');
         $requestData["propriete_image"] = '/storage/'.$path;
         Propriete::create($requestData);
-        return redirect('/admin.proprietelist')->with('flash_message', 'Propriete Addedd!');
+         return redirect()->route("propriete.list");
+        // return back()->with("jkbhjbhjb");
+
     }
     /**
      * Display the specified resource.
@@ -67,7 +70,7 @@ class ProprieteController extends Controller
     public function edit(string $id)
     {
         $propriete = Propriete::findOrFail($id);
-        return view('admin.proprieteedite', compact('propriete'));
+        return view('/admin.proprieteedite', compact('propriete'));
 
     }
 
@@ -84,7 +87,8 @@ class ProprieteController extends Controller
             'status'=> $request->status=1,
 
         ]);
-        return redirect('/admin.proprietelist');
+                return redirect()->route("propriete.list");
+
     }
 
     /**

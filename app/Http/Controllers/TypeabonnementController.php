@@ -35,6 +35,8 @@ class typeabonnementController extends Controller
           'nom'=>$request->input('nom'),
         'montant'=>$request->input('montant'),
         'duree'=>$request->input('duree'),
+        'datefin'=>$request->input('datefin'),
+
        ]);
        return redirect('/admin.typeabonnementlist')->with('success', 'typeabonnement ajouté(e) avec succes');
     }
@@ -61,6 +63,7 @@ class typeabonnementController extends Controller
         'nom'=>$request->input('nom'),
         'montant'=>$request->input('montant'),
         'duree'=>$request->input('duree'),
+        'datefin'=>$request->input('datefin'),
     ]);  
        return redirect('/admin.typeabonnementlist')->with('success', 'La modification a été effectuer avec succes');
     }

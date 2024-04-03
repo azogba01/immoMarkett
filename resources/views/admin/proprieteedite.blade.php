@@ -1,6 +1,15 @@
 @extends('admin.app')
-@section('admincontent') 
-<form action="{{ route('proprietes.update', $propriete->id) }}" method="POST">
+@section('admincontent')
+<section>
+<table class="table table-dark table-hover">
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{session('success')}}
+
+        </div>
+    
+  @endif
+<form action="{{ route('propriete.update', $propriete->id) }}" method="POST">
         @csrf
         @method('PUT')
 
