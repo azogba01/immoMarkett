@@ -21,4 +21,9 @@ class Typeabonnement extends Model
      {
         return $this->belongsTo(Propriete::class);
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }   
+    
 }

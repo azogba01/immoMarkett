@@ -63,9 +63,9 @@ Route::get('/bailleurcreate',[BailleurController::class, 'create']);
 Route::post('/bailleurcreate',[BailleurController::class, 'store'])->name('bailleur.store');
 Route::get('/bailleurlist',[BailleurController::class, 'bailleur']);
 Route::get('/bailleuredit/{id}/',[BailleurController::class, 'edit']);
-Route::put('/bailleuredit/{id}/',[BailleurController::class, 'update'])->name('bailleurs.update') ;
-Route::get('/bailleurdelete/{id}/',[BailleurController::class, 'destroy'])->name('bailleurs.delete') ;
-Route::delete('/bailleurshow/{id}/',[BailleurController::class, 'show'])->name('bailleurs.delete') ;
+Route::put('/bailleuredit/{id}/',[BailleurController::class, 'update'])->name('bailleurs.update');
+Route::get('/bailleurdelete/{id}/',[BailleurController::class, 'destroy'])->name('bailleurs.delete');
+Route::delete('/bailleurshow/{id}/',[BailleurController::class, 'show'])->name('bailleurs.delete');
 
 
  
@@ -73,19 +73,18 @@ Route::get('/villecreate',[VilleController::class, 'create'])->name('villes.crea
 Route::post('/villecreate',[VilleController::class, 'store'])->name('villes.store');
 Route::get('/ villelist',[VilleController::class, 'ville']);
 Route::get('/villedit/{id}/',[VilleController::class, 'edit']);
-Route::put('/villedit/{id}/',[VilleController::class, 'update'])->name('villes.update') ;
-Route::get('/villedelete/{id}/',[VilleController::class, 'destroy'])->name('villes.delete') ;
+Route::put('/villedit/{id}/',[VilleController::class, 'update'])->name('villes.update');
+Route::get('/villedelete/{id}/',[VilleController::class, 'destroy'])->name('villes.delete');
 Route::delete('/villeshow/{id}/',[VilleController::class, 'show'])->name('villes.delete') ;
 
-Route::get('/typeabonnementcreate',[TypeabonnementController::class, 'create'])->name('typeabonnements.create');
-Route::post('/typeabonnementcreate',[TypeabonnementController::class, 'store'])->name('typeabonnements.store');
-Route::get('/ typeabonnementlist',[TypeabonnementController::class, 'typeabonnement']);
-Route::get('/typeabonnementedit/{id}/',[TypeabonnementController::class, 'edit']);
-Route::put('/typeabonnementedit/{id}/',[TypeabonnementController::class, 'update'])->name('typeabonnements.update') ;
-Route::get('/typeabonnementdelete/{id}/',[TypeabonnementController::class, 'destroy'])->name('typeabonnements.delete') ;
-Route::delete('/typeabonnementshow/{id}/',[TypeabonnementController::class, 'show'])->name('typeabonnements.delete') ;
+//Route::get('/typeabonnementcreate',[TypeabonnementController::class, 'create'])->name('typeabonnements.create');
+Route::GET('/typeabonnementstore',[TypeabonnementController::class, 'store'])->name('typeabonnements.store');
+//Route::get('/ typeabonnementlist',[TypeabonnementController::class, 'typeabonnement']);
+// Route::get('/typeabonnementedit/{id}/',[TypeabonnementController::class, 'edit']);
+// Route::put('/typeabonnementedit/{id}/',[TypeabonnementController::class, 'update'])->name('typeabonnements.update') ;
+// Route::get('/typeabonnementdelete/{id}/',[TypeabonnementController::class, 'destroy'])->name('typeabonnements.delete') ;
+// Route::delete('/typeabonnementshow/{id}/',[TypeabonnementController::class, 'show'])->name('typeabonnements.delete') ;
  
 Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\FrontController::class, 'accueil'])->name('home');
+ Route::get('/home', [App\Http\Controllers\FrontController::class, 'accueil'])->name('home');
  

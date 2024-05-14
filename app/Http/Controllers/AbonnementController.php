@@ -57,6 +57,7 @@ class AbonnementController extends Controller
      */
     public function update(UpdateabonnementRequest $request, abonnement $abonnement)
     {
+        
         //
     }
 

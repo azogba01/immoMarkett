@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Propriete;
+use Illuminate\Support\Facades\Auth;
 class FrontController extends Controller
 {
      
     public function accueil(){
+
         $propriete = Propriete::all();
         return view('Front.accueil', compact('propriete'));
        }
