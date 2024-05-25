@@ -23,11 +23,24 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->registerPolicies();
-        Gate::define('bailleur', function (User $user) {
-            return $user->role === 'bailleur';
+
+        Gate::define('bailleur', function ($user) {
+            return $user->role === 'bailleur'; // Assurez-vous que le champ 'role' existe dans votre modèle User
         });
+
+        // Gate::define('bailleur', function (User $user) {
+        //     return $user->role === 'bailleur';
+        // });
         Gate::define('admin', function (User $user) {
             return $user->role === 'admin';
+        });
+
+        Gate::define('viewAdminPage', function ($user) {
+            return $user->role === 'admin';  
+        });
+
+        Gate::define('viewBailleurPage', function ($user) {
+            return $user->role === 'bailleur';  
         });
     }
 }

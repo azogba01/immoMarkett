@@ -21,6 +21,9 @@ return new class extends Migration
             $table->integer('prix');
             $table->integer('superficie');
             $table->string('condition');
+            // $table->unsignedBigInteger('id_categorie');
+            // $table->foreign('id_categorie')->references('id') ->on('categories') ->onDelete('cascade');
+           
             $table->unsignedBigInteger('id_categorie');
             $table->foreign('id_categorie')->references('id') ->on('categories') ->onDelete('cascade');
             $table->integer('status');
