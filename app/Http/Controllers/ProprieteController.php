@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Models\Propriete;
 use App\Models\Categorie;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use DB;
 class ProprieteController extends Controller
@@ -22,9 +23,10 @@ class ProprieteController extends Controller
      */
     public function propriete()
     {
-        $propriete = Propriete::all();
-        $categorie = Categorie::all();
-        return view('/admin.proprietelist', compact('propriete','categorie'));
+        $user = Auth::user();
+        $propriete = Propriete::where('user_id', $user->id)->get();
+        $categories = Categorie::all();
+        return view('admin.proprietelist', compact('propriete', 'categories'));
     }
 
     /**
@@ -51,6 +53,7 @@ class ProprieteController extends Controller
         $fileName = time().$request->file('propriete_image')->getClientOriginalName();
         $path = $request->file('propriete_image')->storeAs('images', $fileName, 'public');
         $requestData["propriete_image"] = '/storage/'.$path;
+        $requestData['user_id'] = Auth::id();
         Propriete::create($requestData);
          return redirect()->route("propriete.list");
         // return back()->with("jkbhjbhjb");
