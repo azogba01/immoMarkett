@@ -52,11 +52,11 @@
           <thead>
             <tr>
               <th scope="col">Num</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Action</th>
-      <th scope="col">Supression</th>
-      <button type='submit' class="btn btn-success" ><a href="createcategorie">Ajouter</a></button>
-   
+              <th scope="col">Nom</th>
+              <th scope="col">Action</th>
+              <th scope="col">Supression</th>
+              <button type='submit' class="btn btn-success" ><a href="createcategorie">Ajouter</a></button>
+          
             </tr>
           </thead>
           <tbody>

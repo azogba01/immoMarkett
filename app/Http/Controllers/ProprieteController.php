@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Models\Propriete;
 use App\Models\Categorie;
+use App\Models\User;
 use Illuminate\Http\Request;
 use DB;
 class ProprieteController extends Controller
@@ -13,8 +14,8 @@ class ProprieteController extends Controller
         $this->middleware('auth');
     }
     public function admin(){
-        
-        return view('admin.index');
+        $usersWithSubscription = User::whereNotNull('abonn_type')->get();
+        return view('admin.index',compact('usersWithSubscription' ));
        }
     /**
      * Display a listing of the resource.

@@ -14,8 +14,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('type');
+<<<<<<< HEAD
             $table->boolean('statut')->default(false);
+=======
+            $table->integer('status');
+>>>>>>> cbd8701ea928fa8c821927135112d4f52868cf21
             $table->string('role')->nullable();
+            $table->string('abonn_type')->default('2mois');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -32,4 +37,8 @@ return new class extends Migration
     {
         Schema::dropIfExists('users');
     }
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> cbd8701ea928fa8c821927135112d4f52868cf21
 };
