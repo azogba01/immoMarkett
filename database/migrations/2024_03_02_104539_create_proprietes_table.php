@@ -16,11 +16,14 @@ return new class extends Migration
             //  $table->unsignedBigInteger('proprietaire_id');
             //  $table->unsignedBigInteger('modalite_id');
             //  $table->unsignedBigInteger('ville_id');
-            //  $table->unsignedBigInteger('categorie_id');
             $table->string('etat');
             $table->integer('prix');
             $table->integer('superficie');
             $table->string('condition');
+             $table->unsignedBigInteger('user_id');
+            // $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id') ->on('users') ->onDelete('cascade');
+           
             $table->unsignedBigInteger('id_categorie');
             $table->foreign('id_categorie')->references('id') ->on('categories') ->onDelete('cascade');
             $table->integer('status');

@@ -30,15 +30,17 @@ Route::get('/login',[FrontController::class, 'connection']);
 Route::get('/inscription',[FrontController::class, 'inscription']);
 Route::get('/about',[FrontController::class, 'about']);
 Route::get('/paiement',[PaiementController::class, 'paiement']);
+
  
 
-Route::get('/createcategorie',[CategorieController::class, 'create']);
-Route::get('/categoryedit/{id}/',[CategorieController::class,'edit']);
-Route::put('/categoryedit/{id}/',[CategorieController::class, 'update'])->name('categories.update');
-Route::get('/categorielist',[CategorieController::class, 'categorie'])->name('categorie.list');
-Route::post('/createcategorie',[CategorieController::class, 'store'])->name('categories.store');
-Route::delete('/categoriedelete/{id}/',[CategorieController::class, 'destroy'])->name('categories.delete') ;
-Route::delete('/categorieshow/{id}/',[CategorieController::class, 'show'])->name('categories.show') ;
+Route::get('/createcategorie',[CategorieController::class, 'create'])->middleware('can:viewAdminPage');
+Route::get('/categoryedit/{id}/',[CategorieController::class,'edit'])->middleware('can:viewAdminPage');
+Route::put('/categoryedit/{id}/',[CategorieController::class, 'update'])->middleware('can:viewAdminPage')->name('categories.update');
+Route::get('/categorielist',[CategorieController::class, 'categorie'])->middleware('can:viewAdminPage')->name('categorie.list');
+Route::post('/createcategorie',[CategorieController::class, 'store'])->middleware('can:viewAdminPage')->name('categories.store');
+Route::delete('/categoriedelete/{id}/',[CategorieController::class, 'destroy'])->middleware('can:viewAdminPage')->name('categories.delete') ;
+Route::delete('/categorieshow/{id}/',[CategorieController::class, 'show'])->middleware('can:viewAdminPage')->name('categories.show') ;
+
 
 
 Route::get('/dashboard',[ProprieteController::class, 'admin']);
@@ -47,25 +49,25 @@ Route::post('/proprietecreate',[ProprieteController::class, 'store'])->name('pro
 Route::get('/proprietelist',[ProprieteController::class, 'propriete'])->name('propriete.list') ;
 Route::get('/proprieteedit/{id}',[ProprieteController::class, 'edit'])->name('propriete.edite');
 Route::put('/proprietedit/{id}/',[ProprieteController::class, 'update'])->name('propriete.update');
-Route::delete('/proprietedelete/{id}/',[ProprieteController::class, 'destroy'])->name('propriete.delete') ;
+Route::delete('/proprietedelete/{id}/',[ProprieteController::class, 'destroy'])->middleware('can:viewAdminPage')->name('propriete.delete') ;
 Route::get('/searchpropriete',[ProprieteController::class, 'searchpropriete'])->name('propriete.search');
 // Route::post('/searchpropriete',[ProprieteController::class, 'searchpropriete'])->name('propriete.create');
 
 
-Route::get('/typebailleurcreate',[TypebailleurController::class, 'create'])->name('typebailleurs.create');
-Route::post('/typebailleurcreate',[TypebailleurController::class, 'store'])->name('typebailleurs.store');
-Route::get('/typebailleurlist',[TypebailleurController::class, 'typebailleur']);
-Route::get('/typebailleurdit/{id}/',[TypebailleurController::class, 'edit']);
-Route::put('/typebailleurdit/{id}/',[TypebailleurController::class, 'update'])->name('typebailleurs.update') ;
-Route::delete('/typebailleurdelete/{id}/',[TypebailleurController::class, 'destroy'])->name('typebailleurs.delete') ;
+Route::get('/typebailleurcreate',[TypebailleurController::class, 'create'])->middleware('can:viewAdminPage')->name('typebailleurs.create');
+Route::post('/typebailleurcreate',[TypebailleurController::class, 'store'])->middleware('can:viewAdminPage')->name('typebailleurs.store');
+Route::get('/typebailleurlist',[TypebailleurController::class, 'typebailleur'])->middleware('can:viewAdminPage');
+Route::get('/typebailleurdit/{id}/',[TypebailleurController::class, 'edit'])->middleware('can:viewAdminPage');
+Route::put('/typebailleurdit/{id}/',[TypebailleurController::class, 'update'])->middleware('can:viewAdminPage')->name('typebailleurs.update') ;
+Route::delete('/typebailleurdelete/{id}/',[TypebailleurController::class, 'destroy'])->middleware('can:viewAdminPage')->name('typebailleurs.delete') ;
 
 Route::get('/bailleurcreate',[BailleurController::class, 'create']);
 Route::post('/bailleurcreate',[BailleurController::class, 'store'])->name('bailleur.store');
 Route::get('/bailleurlist',[BailleurController::class, 'bailleur']);
 Route::get('/bailleuredit/{id}/',[BailleurController::class, 'edit']);
-Route::put('/bailleuredit/{id}/',[BailleurController::class, 'update'])->name('bailleurs.update');
-Route::get('/bailleurdelete/{id}/',[BailleurController::class, 'destroy'])->name('bailleurs.delete');
-Route::delete('/bailleurshow/{id}/',[BailleurController::class, 'show'])->name('bailleurs.delete');
+Route::put('/bailleuredit/{id}/',[BailleurController::class, 'update'])->name('bailleurs.update') ;
+Route::get('/bailleurdelete/{id}/',[BailleurController::class, 'destroy'])->name('bailleurs.delete') ;
+Route::delete('/bailleurshow/{id}/',[BailleurController::class, 'show'])->name('bailleurs.delete') ;
 
 
  

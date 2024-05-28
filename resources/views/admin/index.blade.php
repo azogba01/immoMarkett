@@ -216,10 +216,7 @@
                       </thead>
                       <tbody>
                         @foreach ($usersWithSubscription  as $user)
-                <tr>
-                  <th scope="row">{{$user->id}}</th>
-                  <td>{{$user->name}}</td>
-                  <td>{{$user->role}}</td>
+                     <td>{{$user->role}}</td>
                   <td>{{$user->abonn_type}}</td>
                   <td>{{$user->prix}}</td>
                   <td>{{$user->duree}}</td>

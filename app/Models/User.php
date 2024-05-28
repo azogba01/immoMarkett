@@ -41,10 +41,10 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-       public function isBailleur()
-        {
-            return $this->role === 'bailleur';
-        }
+    //    public function isBailleur()
+    //     {
+    //         return $this->role === 'bailleur';
+    //     }
 
     /**
      * The attributes that should be cast.
@@ -55,4 +55,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function isBailleur()
+    {
+        return $this->role === 'bailleur';
+    }
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
 }
