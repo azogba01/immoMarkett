@@ -14,17 +14,20 @@ return new class extends Migration
         Schema::create('abonnements', function (Blueprint $table) {
             $table->id();
             // $table->unsignedBigInteger('proprietaire_id');
-            $table->unsignedBigInteger('typeabonnement_id');
+            // $table->unsignedBigInteger('typeabonnement_id');
+            $table->integer('duree');
             $table->date('datedebut');
             $table->date('datefin');
-            // $table->foreign('proprietaire_id')
-            //         ->references('id')
-            //         ->on('proprietaires')
-            //         ->onDelete('cascade');
-            $table->foreign('typeabonnement_id')
-                    ->references('id')
-                    ->on('typeabonnements')
+            $table->integer('montant');
+            
+             $table->foreignId('user_id')
+                    ->constrained()
+                    ->onUpdate('cascade')
                     ->onDelete('cascade');
+            // $table->foreign('typeabonnement_id')
+            //         ->constrained()
+            //         ->onUpdate('cascade')
+            //         ->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -25,7 +25,13 @@ class User extends Authenticatable
         'tel',
         'status',
         'password',
+        'statut',
     ];
+    public function Typeabonnements()
+{
+    return $this->hasMany(Post::class);
+}
+
 
     /**
      * The attributes that should be hidden for serialization.

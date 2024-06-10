@@ -540,7 +540,9 @@
 
         <div class="news-carousel-pagination carousel-pagination"></div>
       </div>
-    </section><!-- End Latest News Section -->
+    </section>
+    
+    <!-- End Latest News Section -->
 
     <!--   Testimonials Section   -->
     {{-- <section class="section-testimonials section-t8 nav-arrow-a">
@@ -620,6 +622,9 @@
 
       </div>
     </section><!-- End Testimonials Section --> --}}
+
+
+     <button type='submit' class="btn btn-success" ><a href="{{url('/typeabonnementstore')}}">Passer un abonnement</a></button>
 
   </main><!-- End #main -->
    

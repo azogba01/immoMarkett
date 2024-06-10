@@ -1,9 +1,11 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\Typeabonnement;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use App\Models\abonnement;
+use illuminate\Support\Facades\Auth;
 use App\Http\Requests\UpdatetypeabonnementRequest;
 
 
@@ -31,12 +33,16 @@ class typeabonnementController extends Controller
 
     public function store( Request $request)
     {
-        Typeabonnement::create([
-          'nom'=>$request->input('nom'),
-        'montant'=>$request->input('montant'),
-        'duree'=>$request->input('duree'),
-        'datefin'=>$request->input('datefin'),
-
+        $dateduJour = Carbon::now();
+        $DateFin=$dateduJour->addMonths(2);
+         dd( $DateFin);
+        $dateduJour = $dateduJour->toDateString();
+        abonnement::create([
+        "duree"=> 2,
+        "datedebut"=> $dateduJour,        
+        "datefin"=> $DateFin,        
+        "montant"=> 4000,        
+        "user_id"=> Auth::user()->id,
        ]);
        return redirect('/admin.typeabonnementlist')->with('success', 'typeabonnement ajouté(e) avec succes');
     }
