@@ -145,93 +145,10 @@
 
 
 
-
-    <!--   Services Section   -->
-    {{-- <section class="section-services section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              {{-- <div class="title-box">
-                <h2 class="title-a">Our Services</h2>
-              </div> --}}
+ 
             </div>
           </div>
-        </div>
-        {{-- <div class="row">
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-cart"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Lifestyle</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-calendar4-week"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Loans</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                  aliquet elit, eget tincidunt
-                  nibh pulvinar a.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-calendar4-week"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-card-checklist"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Sell</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> --}}
+        </div> 
       </div>
     {{-- </section><!-- End Services Section --> --}}
 
@@ -242,7 +159,7 @@
           <div class="col-md-12">
             <div class="title-wrap d-flex justify-content-between">
               <div class="title-box">
-                <h2 class="title-a">Proprietés</h2>
+                <h2 class="title-a"><a href="wa.m">proprietes</a></h2>
               </div>
               {{-- <div class="title-link">
                 <a href="property-grid.html">All Property
@@ -255,18 +172,21 @@
 
         <div id="property-carousel" class="swiper">
           <div class="swiper-wrapper">
-            @foreach ($propriete as $item)
+            
             <div class="carousel-item-b swiper-slide">
+              @foreach ($propriete as $item)
               <div class="card-box-a card-shadow">
                 <div class="img-box-a">
-                  <img src="assets/img/property-6.jpg" alt="" class="img-a img-fluid">
+                  <img src="{{asset($item->propriete_image)}}" style="max-height: 364px; max-width: 547px; " alt="" class="img-a img-fluid">
                 </div>
                 <div class="card-overlay">
                   <div class="card-overlay-a-content">
                     <div class="card-header-a">
                       <h2 class="card-title-a">
                         <a href="property-single.html">{{$item->etat}}
-                          <br /> Olive Road Two</a>
+                          <br /> <a href="https://wa.me/{{$item->user->tel}}" target="_blank">
+                            <button class="btn btn-success">Contactez-nous sur WhatsApp</button>
+                        </a></a>
                       </h2>
                     </div>
                     <div class="card-body-a">

@@ -14,6 +14,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('type');
+            $table->string('tel');
             $table->integer('status');
             $table->string('role')->nullable();
             $table->string('abonn_type')->default('2mois');
